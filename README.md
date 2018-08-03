@@ -30,18 +30,20 @@ npm run dev
 ```
 
 ## 目录结构
-|-api                           接口目录<br>
-|-build                         构建目录<br>
-|-config                        项目配置目录<br>
-|-dist                          输出目录<br>
-|-node_modules                  npm模块<br>
-|-src                           项目代码<br>
-|-static                        静态资源<br>
-|-.babelrc                      ES6转换配置<br>
-|-.editorconfig                 配置工具配置<br>
-|-.gitignore                    git忽略配置<br>
-|-.postcssrc.js                 css生成配置<br>
-|-index.html                    首页<br>
-|-package-lock.json             项目依赖<br>
-|-package.json                  项目依赖<br>
+```
+|-api                           接口目录
+|-build                         构建目录
+|-config                        项目配置目录
+|-dist                          输出目录
+|-node_modules                  npm模块
+|-src                           项目代码
+|-static                        静态资源
+|-.babelrc                      ES6转换配置
+|-.editorconfig                 配置工具配置
+|-.gitignore                    git忽略配置
+|-.postcssrc.js                 css生成配置
+|-index.html                    首页
+|-package-lock.json             项目依赖
+|-package.json                  项目依赖
 |-README.md
+```
