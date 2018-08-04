@@ -37,6 +37,11 @@ npm run dev
 |-dist                          //输出目录
 |-node_modules                  //npm模块
 |-src                           //项目代码
+    |-components                //组件目录
+    |-router                    //目录目录
+    |-store                     //数据目录
+    |-App.vue                   //第一个组件
+    |-mian.js                   //主入口
 |-static                        //静态资源
 |-.babelrc                      //ES6转换配置
 |-.editorconfig                 //配置工具配置
@@ -47,3 +52,6 @@ npm run dev
 |-package.json                  //项目依赖
 |-README.md
 ```
+
+## 数据仿真
+

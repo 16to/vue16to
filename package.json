@@ -5,8 +5,9 @@
   "author": "16to",
   "private": true,
   "scripts": {
+    "api":"nodemon api/api.js -w api",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "debug": "npm run api | npm run dev",
     "build": "node build/build.js"
   },
   "dependencies": {
