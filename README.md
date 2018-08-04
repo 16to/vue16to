@@ -54,4 +54,16 @@ npm run dev
 ```
 
 ## 数据仿真
+/api目录下api.js中声明，.json是数据文件，启动npm run api
+```
+app.js文件中:
+const a=require('./a.json');
+app.get('/api/a', function (req, res) {
+    res.send(a);
+});
 
+a.json文件:
+{
+"cc":0
+}
+```

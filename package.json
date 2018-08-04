@@ -5,7 +5,7 @@
   "author": "16to",
   "private": true,
   "scripts": {
-    "api":"nodemon api/api.js -w api",
+    "api": "nodemon api/api.js -w api",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "debug": "npm run api | npm run dev",
     "build": "node build/build.js"
@@ -36,6 +36,7 @@
     "less": "^3.8.0",
     "less-loader": "^4.1.0",
     "node-notifier": "^5.1.2",
+    "nodemon": "^1.18.3",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
     "portfinder": "^1.0.13",
