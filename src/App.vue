@@ -1,22 +1,29 @@
 <template>
   <div id="app">
-    <router-view/>
+    <pub-header id="header"/>
+    <router-view id="content"/>
+    <pub-footer id="footer"/>
   </div>
 </template>
 
 <script>
+import pubheader from './components/pubHeader.vue'
+import pubfooter from './components/pubFooter.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    'pub-header':pubheader,
+    'pub-footer':pubfooter,
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+#header{
+    height: 45px;
+}
+#content{
+    margin-top: 45px;
+    background-color: #F4F4F4;
 }
 </style>

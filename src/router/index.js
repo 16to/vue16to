@@ -1,6 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import home from '@/components/home'
+import art from '@/components/art'
+import design from '@/components/design'
+import skill from '@/components/skill'
+import special from '@/components/special'
+import works from '@/components/works'
+import comment from '@/components/comment'
+import about from '@/components/about'
+import contact from '@/components/contact'
+
 
 Vue.use(Router)
 
@@ -8,8 +17,48 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'home',
+      component: home
+    },
+    {
+      path: '/design',
+      name: 'design',
+      component: design
+    },
+    {
+      path: '/skill',
+      name: 'skill',
+      component: skill
+    },
+    {
+      path: '/special',
+      name: 'special',
+      component: special
+    },
+    {
+      path: '/works',
+      name: 'works',
+      component: works
+    },
+    {
+      path: '/art',
+      name: 'art',
+      component: art
+    },
+    {
+      path: '/comment',
+      name: 'comment',
+      component: comment
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: about
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: contact
     }
   ],
   mode:'history'

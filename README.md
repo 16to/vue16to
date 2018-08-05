@@ -40,9 +40,16 @@ npm run dev
     |-components                //组件目录
     |-router                    //目录目录
     |-store                     //数据目录
+        |-modules               //业务模块store
+        |-actions.js            //根级别action
+        |-getters.js            //根级别getter
+        |-mutations.js          //根级别mutation
+        |-index.js              //组装模块并导出
+        |-types.js              //常量
     |-App.vue                   //第一个组件
-    |-mian.js                   //主入口
+    |-main.js                   //主入口
 |-static                        //静态资源
+    |-public.less               //公共less文件
 |-.babelrc                      //ES6转换配置
 |-.editorconfig                 //配置工具配置
 |-.gitignore                    //git忽略配置
@@ -67,3 +74,11 @@ a.json文件:
 "cc":0
 }
 ```
+
+## vuex模块
+
+
+
+## router模块
+
+## components模块
