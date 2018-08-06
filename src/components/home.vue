@@ -19,7 +19,7 @@
                                     <a href="" title="" class="title">{{v.title}}</a>
                                 </p>
                                 <p>
-                                    <a href="" class="kind">前端专题</a><em class="num"><span>{{v.click}}</span>人气</em><em class="time">{{v.addtime|formatTime("YMD")}}</em>
+                                    <a href="" class="kind">{{v.type|specialToStr}}</a><em class="num"><span>{{v.click}}</span>人气</em><em class="time">{{v.addtime|formatTime("YMD")}}</em>
                                 </p>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                         <div class="time"><span>{{v.addtime|formatTime("Y")}}</span><br><span>{{v.addtime|formatTime("MD")}}</span></div>
                         <div class="content">
                             <div class="title"><a href="http://www.16to.com/skill/detail-145.html">{{v.title}}</a></div>
-                            <div class="info"><span> 分类：<a href="http://www.16to.com/skill/type-0.html">{{v.type}}</a></span><span>标签：<a href="http://www.16to.com/skill/tag-25.html">{{v.tag}}</a></span><span><a href="http://www.16to.com/skill/detail-145.html">浏览({{v.click}})</a></span></div>
+                            <div class="info"><span> 分类：<a href="http://www.16to.com/skill/type-0.html">{{v.type|kindToStr}}</a></span><span>标签：<a href="http://www.16to.com/skill/tag-25.html">{{v.tag|tagToStr}}</a></span><span><a href="http://www.16to.com/skill/detail-145.html">浏览({{v.click}})</a></span></div>
                             <div class="des">{{v.content|stripHTML|subStr(180)}}</div>
                         </div>
                     </li>
