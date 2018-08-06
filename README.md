@@ -77,7 +77,7 @@ a.json文件:
 
 ## vuex模块
 
-store
+store下的模块
 
 
 ## router模块
