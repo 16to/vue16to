@@ -51,4 +51,22 @@ function subStr(str,length){
     return str.substr(0,length);
 }
 
-export { formatTime,add16to,stripHTML,subStr}
+//返回标签
+function tagToStr(tag){
+    var skill_tag_arr=["PHP","JavaScript","Jquery","CSS","HTML","HTML5","XML","AJAX","SOCKET","ThinkPHP","MySql","Sqlite","Linux","Apahce","XP","WIN7","WIN8","\u5d4c\u5165\u5f0f","VIM","Eclipse","Firefox","IE","\u524d\u7aef\u8bbe\u8ba1","SVN","CSS3","gulp","Sublime"];
+    return skill_tag_arr[tag];
+}
+
+//返回分类
+function kindToStr(kind){
+    var skill_kind_arr=["WEB\u5f00\u53d1","WEB\u8bbe\u8ba1","\u6570\u636e\u5e93","\u670d\u52a1\u5668","\u5f00\u53d1\u5de5\u5177","SEO","C\/C++"];
+    return skill_kind_arr[kind];
+}
+
+//返回专题类型
+function specialToStr(type){
+    var special_type_arr=["前端专题","后端专题","工具专题"];
+    return special_type_arr[type];
+}
+
+export { formatTime,add16to,stripHTML,subStr,tagToStr,kindToStr,specialToStr}
