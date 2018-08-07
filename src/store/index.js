@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import getters from './getters'
 import actions from './actions'
 import home from './modules/home'
+import skill from './modules/skill'
 
 Vue.use(Vuex);
 
@@ -11,6 +12,7 @@ export default new Vuex.Store({
     actions,
     modules:{
         //业务模块
-        home
+        home,
+        skill
     }
 })

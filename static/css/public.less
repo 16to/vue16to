@@ -3,6 +3,8 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font:12px/1.5 "microsoft yahei",Tahoma,Helvetica,SimSun,sans-serif;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 body {
     margin: 0;
@@ -63,17 +65,18 @@ img{
 em{
     font-style: normal;
 }
-.right{
-    float: right;
-}
-.left{
-    float: left;
-}
+// .right{
+//     float: right;
+// }
+// .left{
+//     float: left;
+// }
 .wrap{
 	position: relative;
 	height: 100%;
 }
 .row{
+        min-width: 990px;
         width: 990px;
         margin: 0 auto;
         overflow: hidden;

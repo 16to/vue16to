@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import store from './store/index'
 import publicless from '../static/css/public.less'
+import mainless from '../static/css/main.less'
 import * as filters from '../static/js/filters.js'
 
 //引入公共过滤器

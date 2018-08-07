@@ -9,6 +9,7 @@ import works from '@/components/works'
 import comment from '@/components/comment'
 import about from '@/components/about'
 import contact from '@/components/contact'
+import skillDetail from '@/components/skillDetail'
 
 
 Vue.use(Router)
@@ -28,7 +29,12 @@ export default new Router({
     {
       path: '/skill',
       name: 'skill',
-      component: skill
+      component: skill,
+    },
+    {
+      path:'/skill/detail/:id',
+      name:'skillDetail',
+      component:skillDetail
     },
     {
       path: '/special',
@@ -59,6 +65,10 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: contact
+    },
+    {
+      path:"*",
+      redirect:"/"
     }
   ],
   mode:'history'

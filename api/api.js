@@ -6,7 +6,7 @@ const special_list=require('./special_list.json');
 const skill_list=require('./skill_list.json');
 const art_list=require('./art_list.json');
 const comment_list=require('./comment_list.json');
-
+const skill_detail =require('./skill_detail.json');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
     extended: false
@@ -51,6 +51,10 @@ app.get('/api/art_list', function (req, res) {
 
 app.get('/api/comment_list', function (req, res) {
     res.send(comment_list);
+});
+
+app.get('/api/skill_detail/:id', function (req, res) {
+    res.send(skill_detail);
 });
 //init
 var server = app.listen(3000, function () {
