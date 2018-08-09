@@ -3,7 +3,9 @@ import axios from 'axios'
 
 const state={
     skill_all:{},
-    skill_detail:{}
+    skill_detail:{},
+    skill_tag:{},
+    skill_type:{}
 }
 
 const getters={
@@ -13,6 +15,12 @@ const getters={
     skillDetail(state){
         return state.skill_detail
     },
+    skillTag(state){
+        return state.skill_tag
+    },
+    skillType(stae){
+        return state.skill_type
+    }
 
 }
 
@@ -30,6 +38,18 @@ const actions={
         axios.get("/api/skill_detail/"+id).then((res)=>{
             commit("SKILL_DETAIL",res.data);
         })
+    },
+    //获取skillTag
+    getSkillTag({commit,state}){
+        axios.get("/api/skill_tag").then((res)=>{
+            commit("SKILL_TAG",res.data);
+        })
+    },
+    //获取skillType
+    getSkillType({commit,state}){
+        axios.get("/api/skill_type").then((res)=>{
+            commit("SKILL_TYPE",res.data);
+        })
     }
 }
 
@@ -39,6 +59,12 @@ const mutations={
     },
     SKILL_DETAIL(state,data){
         state.skill_detail=data;
+    },
+    SKILL_TAG(state,data){
+        state.skill_tag=data;
+    },
+    SKILL_TYPE(state,data){
+        state.skill_type=data;
     }
 }
 

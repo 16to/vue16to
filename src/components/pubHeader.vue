@@ -2,10 +2,10 @@
 <div class="head">
     <div class="row">
         <div class="logo">
-            <router-link to="/"><img src="/static/img/logo.png" title="一路向前"></router-link>
+            <a href="/index"><img src="/static/img/logo.png" title="一路向前"></a>
         </div>
         <div class="tab">
-            <router-link to="/">首页</router-link>
+            <router-link to="/index">首页</router-link>
             <router-link to="/skill">技术</router-link>
             <router-link to="/special">专题</router-link>
             <router-link to="/works">项目</router-link>
@@ -101,7 +101,7 @@
     color:#ffffff;
     text-decoration:none;
 }
-.tab .router-link-exact-active{
+.tab .router-link-exact-active,.tab .router-link-active{
     background:#2d2d2d;
     color:#ffffff;
 }

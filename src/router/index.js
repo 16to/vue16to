@@ -17,7 +17,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/index',
       name: 'home',
       component: home
     },
@@ -68,7 +68,7 @@ export default new Router({
     },
     {
       path:"*",
-      redirect:"/"
+      redirect:"/index"
     }
   ],
   mode:'history'

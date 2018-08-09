@@ -5,7 +5,8 @@ const state={
     special_list:{},
     skill_list:{},
     art_list:{},
-    comment_list:{}
+    comment_list:{},
+
 }
 
 const getters={
@@ -20,7 +21,8 @@ const getters={
     },
     commentList(state){
         return state.comment_list
-    },
+    }
+
 
 }
 
