@@ -4,22 +4,22 @@
             <div class="list_title">
                 <div class="left">热点专题<span>专注一流前端开发</span></div>
                 <div class="right">
-                    <a href="/special/?s=type&i=0">前端专题</a>/
-                    <a href="/special/?s=type&i=1">后端专题</a>/
-                    <a href="/special/?s=type&i=2">工具专题</a>
+                    <router-link to="/special/?s=type&i=0">前端专题</router-link>/
+                    <router-link to="/special/?s=type&i=1">后端专题</router-link>/
+                    <router-link to="/special/?s=type&i=2">工具专题</router-link>
                 </div>
             </div>
             <div class="list">
                 <ul>
                     <li v-for="v in special_list">
                         <div class="box">
-                            <a :href='"/special/detail/"+v.id' class="img"><img :src="v.img|add16to" :title="v.title"></a>
+                            <router-link :to='"/special/detail/"+v.id' class="img"><img :src="v.img|add16to" :title="v.title"></router-link>
                             <div class="content">
                                 <p>
-                                    <a :href='"/special/detail/"+v.id' :title="v.title" class="title">{{v.title}}</a>
+                                    <router-link :to='"/special/detail/"+v.id' :title="v.title" class="title">{{v.title}}</router-link>
                                 </p>
                                 <p>
-                                    <a :href='"/special/?s=type&i="+v.type' class="kind">{{v.type|specialToStr}}</a><em class="num"><span>{{v.click}}</span>人气</em><em class="time">{{v.addtime|formatTime("YMD")}}</em>
+                                    <router-link :to='"/special/?s=type&i="+v.type' class="kind">{{v.type|specialToStr}}</router-link><em class="num"><span>{{v.click}}</span>人气</em><em class="time">{{v.addtime|formatTime("YMD")}}</em>
                                 </p>
                             </div>
                         </div>
@@ -32,13 +32,13 @@
                     <div class="hot_list">
                         <div class="hot_title">
                             <span class="hot_title_left">最新项目</span>
-                            <span class="hot_title_right"><a href="/works">更多项目</a></span>
+                            <span class="hot_title_right"><router-link to="/works">更多项目</router-link></span>
                         </div>
                         <ul class="hot">
                             <li v-for="(v,k) in comment_list">
                                 <em class="num hotnum" v-if="k<=2">{{k+1}}</em>
                                 <em class="num" v-if="k>2">{{k+1}}</em>
-                                <a :href='"/works/detail/"+v.id' :title="v.content">{{(v.name+"："+v.content)|subStr(15)}}</a>
+                                <router-link :to='"/works/detail/"+v.id' :title="v.content">{{(v.name+"："+v.content)|subStr(15)}}</router-link>
                             </li>
 
 
@@ -47,13 +47,13 @@
                     <div class="hot_list">
                         <div class="hot_title">
                             <span class="hot_title_left">最新文章</span>
-                            <span class="hot_title_right"><a href="/art">更多文章</a></span>
+                            <span class="hot_title_right"><router-link to="/art">更多文章</router-link></span>
                         </div>
                         <ul class="hot">
                             <li v-for="(v,k) in art_list">
                                 <em class="num hotnum" v-if="k<=2">{{k+1}}</em>
                                 <em class="num" v-if="k>2">{{k+1}}</em>
-                                <a :href='"/art/detail/"+v.id' :title="v.title">{{v.title|subStr(15)}}</a>
+                                <router-link :to='"/art/detail/"+v.id' :title="v.title">{{v.title|subStr(15)}}</router-link>
                             </li>
                         </ul>
                     </div>
@@ -63,15 +63,15 @@
                     <div class="box">
                     <div class="art_title">技术积累<span>每天进步一点点</span>
                     <div class="art_title_right">
-                    <a href="/skill">更多技术</a>
+                    <router-link to="/skill">更多技术</router-link>
                     </div>
                     </div>
                     <ul>
                     <li v-for="v in skill_list">
                         <div class="time"><span>{{v.addtime|formatTime("Y")}}</span><br><span>{{v.addtime|formatTime("MD")}}</span></div>
                         <div class="content">
-                            <div class="title"><a :href='"/skill/detail/"+v.id'>{{v.title}}</a></div>
-                            <div class="info"><span> 分类：<a :href='"/skill/?s=type&i="+v.type'>{{v.type|kindToStr}}</a></span><span>标签：<a :href='"/skill/?s=tag&i="+v.tag'>{{v.tag|tagToStr}}</a></span><span><a :href='"/skill/detail/"+v.id'>浏览({{v.click}})</a></span></div>
+                            <div class="title"><router-link :to='"/skill/detail/"+v.id'>{{v.title}}</router-link></div>
+                            <div class="info"><span> 分类：<router-link :to='"/skill/?s=type&i="+v.type'>{{v.type|kindToStr}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+v.tag'>{{v.tag|tagToStr}}</router-link></span><span><router-link :to='"/skill/detail/"+v.id'>浏览({{v.click}})</router-link></span></div>
                             <div class="des">{{v.content|stripHTML|subStr(180)}}</div>
                         </div>
                     </li>
