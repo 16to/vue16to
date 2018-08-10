@@ -9,6 +9,7 @@ const comment_list=require('./comment_list.json');
 const skill_detail =require('./skill_detail.json');
 const skill_tag =require('./skill_tag.json');
 const skill_type =require('./skill_type.json');
+const skill_all =require('./skill_all.json');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
     extended: false
@@ -53,6 +54,10 @@ app.get('/api/art_list', function (req, res) {
 
 app.get('/api/comment_list', function (req, res) {
     res.send(comment_list);
+});
+
+app.get('/api/skill_all', function (req, res) {
+    res.send(skill_all);
 });
 
 app.get('/api/skill_detail/:id', function (req, res) {

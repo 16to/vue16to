@@ -1,5 +1,5 @@
 <template>
-    <div class="hot_list">
+    <div class="hot_list" id="hot_tag">
         <div class="hot_title">
             <span class="hot_title_left">分类标签</span>
         </div>

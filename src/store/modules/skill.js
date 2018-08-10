@@ -27,8 +27,19 @@ const getters={
 const actions={
 
     //获取skill all
-    getSkillAll({commit,state}){
-        axios.get("/api/skill_all").then((res)=>{
+    getSkillAll({commit,state},param){
+        let url="";
+        console.log(param);
+        if(param.s=="type"){
+            url="/api/skill_all/?s=type&i="+param.i;
+        }
+        else if(param.s=="tag"){
+            url="/api/skill_all/?s=tag&i="+param.i;
+        }
+        else{
+            url="/api/skill_all";
+        }
+        axios.get(url).then((res)=>{
             commit("SKILL_ALL",res.data);
         })
     },

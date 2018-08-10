@@ -31,14 +31,16 @@
 </template>
 
 <script>
+import {hotFixed} from "../../static/js/fixed.js"
 import pubSkill from './pubSkill'
 import pubTag from './pubTag'
 export default {
     name: 'skill',
     created(){
-        console.log(this.$route);
-        this.$store.dispatch("getSkill");
-        this.$store.dispatch("getArt");
+        this.$store.dispatch("getSkillAll",{s:this.$route.query.s,i:this.$route.query.i});
+    },
+    mounted(){
+        hotFixed();
     },
     data(){
         return {
@@ -48,9 +50,17 @@ export default {
     computed:{
         skill_list(){
             return this.$store.getters.skillList;
-        },
-        art_list(){
-            return this.$store.getters.artList;
+        }
+    },
+    watch:{
+        '$route'(to,from){
+            getSkillAllByType();
+        }
+    },
+    methods:{
+        getSkillAllByType(type){
+            this.$store.dispatch("getSkillAll",{s:this.$route.query.s,i:this.$route.query.i});
+            this.skill_list=this.$store.getters.skillList;
         }
     },
     components:{
