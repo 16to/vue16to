@@ -14,6 +14,8 @@ const skill_all_tag =require('./skill_all_tag.json');
 const skill_all_type =require('./skill_all_type.json');
 const special_all=require('./special_all.json');
 const special_detail=require('./special_detail.json');
+const works_all=require('./works_all.json');
+const system_tree=require('./system_tree.json');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
     extended: false
@@ -68,6 +70,10 @@ app.get('/api/comment_list', function (req, res) {
     res.send(comment_list);
 });
 
+app.get('/api/works_all', function (req, res) {
+    res.send(works_all);
+});
+
 app.get('/api/skill_all', function (req, res) {
     console.log(req.query);
     if(req.query.s=="tag"){
@@ -77,9 +83,9 @@ app.get('/api/skill_all', function (req, res) {
         res.send(skill_all_type);
     }
     else{
-        res.send(skill_all);    
+        res.send(skill_all);
     }
-    
+
 });
 
 app.get('/api/skill_detail/:id', function (req, res) {
@@ -92,6 +98,10 @@ app.get('/api/skill_tag', function (req, res) {
 
 app.get('/api/skill_type', function (req, res) {
     res.send(skill_type);
+});
+
+app.get('/api/system_tree', function (req, res) {
+    res.send(system_tree);
 });
 //init
 var server = app.listen(3000, function () {

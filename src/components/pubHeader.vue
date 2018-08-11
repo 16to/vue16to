@@ -10,8 +10,7 @@
             <router-link to="/special">专题</router-link>
             <router-link to="/works">项目</router-link>
             <router-link to="/art">文章</router-link>
-            <router-link to="/system">体系</router-link>
-            <router-link to="/design">设计</router-link>
+            <router-link to="/system">技术栈</router-link>
         </div>
         <div class="login">
             <router-link to="/about">关于</router-link> |  <router-link to="/contact">联系</router-link>

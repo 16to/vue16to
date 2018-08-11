@@ -75,11 +75,5 @@ a.json文件:
 }
 ```
 
-## vuex模块
-
-store下的模块
-
-
-## router模块
-
-## components模块
+## BUG
+支持Markdown

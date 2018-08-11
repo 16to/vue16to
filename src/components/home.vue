@@ -6,7 +6,7 @@
                 <div class="right">
                     <router-link to="/special">全部</router-link>
                     /
-                    <router-link to="/special">全部</router-link>
+                    <router-link to="/special/?s=type0">前端专题</router-link>
                     /
                     <router-link to="/special/?s=type1">后端专题</router-link>
                     /

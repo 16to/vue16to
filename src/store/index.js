@@ -5,6 +5,8 @@ import actions from './actions'
 import home from './modules/home'
 import skill from './modules/skill'
 import special from './modules/special'
+import works from './modules/works'
+import system from './modules/system'
 
 Vue.use(Vuex);
 
@@ -15,6 +17,8 @@ export default new Vuex.Store({
         //业务模块
         home,
         skill,
-        special
+        special,
+        works,
+        system
     }
 })

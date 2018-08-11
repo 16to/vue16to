@@ -69,4 +69,10 @@ function specialToStr(type){
     return special_type_arr[type];
 }
 
-export {formatTime,add16to,stripHTML,subStr,tagToStr,kindToStr,specialToStr}
+//返回项目类型
+function worksToStr(type){
+    var works_type_arr=["资讯门户","企业品牌","交易商城","社区论坛","办公政府","游戏娱乐","有偿服务","搜索功能","综合类","其他"];
+    return works_type_arr[type];
+}
+
+export {formatTime,add16to,stripHTML,subStr,tagToStr,kindToStr,specialToStr,worksToStr}

@@ -37,13 +37,11 @@
 export default {
     name: 'special',
     created(){
-        console.log(123);
         this.$store.dispatch("getSpecialAll",{s:this.$route.query.s});
     },
     computed:{
         special_all(){
-            console.log(this.$store.getters.specialAll);
-             return this.$store.getters.specialAll;
+            return this.$store.getters.specialAll;
         },
         search_title(){
             let str="";
@@ -57,7 +55,7 @@ export default {
                 str="工具专题";
             }
             else{
-                str="全部";
+                str="全部内容";
             }
             return str;
         }
