@@ -69,4 +69,4 @@ function specialToStr(type){
     return special_type_arr[type];
 }
 
-export { formatTime,add16to,stripHTML,subStr,tagToStr,kindToStr,specialToStr}
+export {formatTime,add16to,stripHTML,subStr,tagToStr,kindToStr,specialToStr}

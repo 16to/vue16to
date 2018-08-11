@@ -10,7 +10,7 @@
             <router-link to="/special">专题</router-link>
             <router-link to="/works">项目</router-link>
             <router-link to="/art">文章</router-link>
-            <router-link to="/comment">评论</router-link>
+            <router-link to="/system">体系</router-link>
             <router-link to="/design">设计</router-link>
         </div>
         <div class="login">
@@ -18,7 +18,7 @@
         </div>
         <div class="search">
             <input type="text" name="s" id="seach_input" value="">
-            <a href="javascript:;" id="search_btn"></a>
+            <span href="javascript:;" id="search_btn"></span>
         </div>
     </div>
 </div>

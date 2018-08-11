@@ -8,17 +8,21 @@
                 </div>
                 <div class="left">
                     <div class="box">
-                    <div class="art_title">技术积累<span>每天进步一点点</span>
+                    <div class="art_title">技术积累<span>{{search_title}}</span>
                     <div class="art_title_right">
-                    <a href="/skill/?s=hot">热门技术</a>
+                    <router-link to="/skill">全部</router-link>
+                    /
+                    <router-link to="/skill/?s=time">时间</router-link>
+                    /
+                    <router-link to="/skill/?s=hot">热度</router-link>
                     </div>
                     </div>
                     <ul>
-                    <li v-for="v in skill_list">
+                    <li v-for="v in skill_all">
                         <div class="time"><span>{{v.addtime|formatTime("Y")}}</span><br><span>{{v.addtime|formatTime("MD")}}</span></div>
                         <div class="content">
-                            <div class="title"><a :href='"/skill/detail/"+v.id'>{{v.title}}</a></div>
-                            <div class="info"><span> 分类：<a :href='"/skill/?s=type&i="+v.type'>{{v.type|kindToStr}}</a></span><span>标签：<a :href='"/skill/?s=tag&i="+v.tag'>{{v.tag|tagToStr}}</a></span><span><a :href='"/skill/detail/"+v.id'>浏览({{v.click}})</a></span></div>
+                            <div class="title"><router-link :to='"/skill/detail/"+v.id'>{{v.title}}</router-link></div>
+                            <div class="info"><span> 分类：<router-link :to='"/skill/?s=type&i="+v.type'>{{v.type|kindToStr}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+v.tag'>{{v.tag|tagToStr}}</router-link></span><span><router-link :to='"/skill/detail/"+v.id'>浏览({{v.click}})</router-link></span></div>
                             <div class="des">{{v.content|stripHTML|subStr(180)}}</div>
                         </div>
                     </li>
@@ -32,6 +36,7 @@
 
 <script>
 import {hotFixed} from "../../static/js/fixed.js"
+import * as filterFun from "../../static/js/filters.js"
 import pubSkill from './pubSkill'
 import pubTag from './pubTag'
 export default {
@@ -42,25 +47,38 @@ export default {
     mounted(){
         hotFixed();
     },
-    data(){
-        return {
-            msg: "skill"
-        }
-    },
     computed:{
-        skill_list(){
-            return this.$store.getters.skillList;
+        skill_all(){
+             return this.$store.getters.skillAll;
+        },
+        search_title(){
+            let str="";
+            if(this.$route.query.s=="type"){
+                str="分类："+filterFun.kindToStr(this.$route.query.i);
+            }
+            else if(this.$route.query.s=="tag"){
+                str="标签："+filterFun.tagToStr(this.$route.query.i);
+            }
+            else if(this.$route.query.s=="hot"){
+                str="热度排序";
+            }
+            else if(this.$route.query.s=="time"){
+                str="时间排序";
+            }
+            else{
+                str="全部";
+            }
+            return str;
         }
     },
     watch:{
         '$route'(to,from){
-            getSkillAllByType();
+            this.getSkillAllByType();
         }
     },
     methods:{
-        getSkillAllByType(type){
+        getSkillAllByType(){
             this.$store.dispatch("getSkillAll",{s:this.$route.query.s,i:this.$route.query.i});
-            this.skill_list=this.$store.getters.skillList;
         }
     },
     components:{
@@ -71,7 +89,4 @@ export default {
 </script>
 
 <style scoped>
-    p{
-        line-height: 100px;
-    }
 </style>

@@ -6,10 +6,11 @@ import design from '@/components/design'
 import skill from '@/components/skill'
 import special from '@/components/special'
 import works from '@/components/works'
-import comment from '@/components/comment'
+import system from '@/components/system'
 import about from '@/components/about'
 import contact from '@/components/contact'
 import skillDetail from '@/components/skillDetail'
+import specialDetail from '@/components/specialDetail'
 
 
 Vue.use(Router)
@@ -42,6 +43,11 @@ export default new Router({
       component: special
     },
     {
+      path:'/special/detail/:id',
+      name:'specialDetail',
+      component:specialDetail
+    },
+    {
       path: '/works',
       name: 'works',
       component: works
@@ -52,9 +58,9 @@ export default new Router({
       component: art
     },
     {
-      path: '/comment',
-      name: 'comment',
-      component: comment
+      path: '/system',
+      name: 'system',
+      component: system
     },
     {
       path: '/about',

@@ -2,13 +2,12 @@
     <div class="hot_list">
         <div class="hot_title">
             <span class="hot_title_left">最新技术</span>
-            <span class="hot_title_right"><a href="/skill">更多技术</a></span>
         </div>
         <ul class="hot">
-            <li v-for="(v,k) in skill_list">
+            <li v-for="(v,k) in skill_list" :key="v.id">
                 <em class="num hotnum" v-if="k<=2">{{k+1}}</em>
                 <em class="num" v-if="k>2">{{k+1}}</em>
-                <a :href='"/skill/detail/"+v.id' :title="v.title">{{(v.title)|subStr(15)}}</a>
+                <router-link :to='"/skill/detail/"+v.id' :title="v.title">{{(v.title)|subStr(15)}}</router-link>
             </li>
         </ul>
     </div>

@@ -9,7 +9,7 @@
                 <div class="left">
                     <div class="box">
                     <div class="title">{{skillDetail.title}}</div>
-                    <div class="info"><span>发布时间：{{skillDetail.addtime|formatTime("YMDHMS")}}</span><span> 分类：<a href="http://www.16to.com/skill/type-0.html">{{skillDetail.type|kindToStr}}</a></span><span>标签：<a href="http://www.16to.com/skill/tag-1.html">{{skillDetail.tag|tagToStr}}</a></span></div>
+                    <div class="info"><span>发布时间：{{skillDetail.addtime|formatTime("YMDHMS")}}</span><span> 分类：<router-link :to='"/skill/?s=type&i="+skillDetail.type'>{{skillDetail.type|kindToStr}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+skillDetail.tag'>{{skillDetail.tag|tagToStr}}</router-link></span></div>
                     <div class="content" v-html="skillDetail.content">
 
                     </div>

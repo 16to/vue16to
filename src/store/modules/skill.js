@@ -2,10 +2,10 @@
 import axios from 'axios'
 
 const state={
-    skill_all:{},
-    skill_detail:{},
-    skill_tag:{},
-    skill_type:{}
+    skill_all:"",
+    skill_detail:"",
+    skill_tag:"",
+    skill_type:""
 }
 
 const getters={
@@ -28,16 +28,12 @@ const actions={
 
     //获取skill all
     getSkillAll({commit,state},param){
-        let url="";
-        console.log(param);
-        if(param.s=="type"){
-            url="/api/skill_all/?s=type&i="+param.i;
+        let url="/api/skill_all";
+        if(param.s !== undefined){
+            url="/api/skill_all/?s="+param.s;
         }
-        else if(param.s=="tag"){
-            url="/api/skill_all/?s=tag&i="+param.i;
-        }
-        else{
-            url="/api/skill_all";
+        if(param.i !== undefined){
+            url=url+"&i="+param.i;
         }
         axios.get(url).then((res)=>{
             commit("SKILL_ALL",res.data);

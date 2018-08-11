@@ -4,8 +4,8 @@
             <span class="hot_title_left">分类标签</span>
         </div>
         <div id="tag">
-            <a v-for="(v,k) in skill_type":href='"/skill/?s=type&i="+k'>{{v}}</a>
-            <a v-for="(v,k) in skill_tag":href='"/skill/?s=tag&i="+k'>{{v}}</a>
+            <router-link v-for="(v,k) in skill_type":to='"/skill/?s=type&i="+k' :key="v.id">{{v}}</router-link>
+            <router-link v-for="(v,k) in skill_tag":to='"/skill/?s=tag&i="+k' :key="v.id">{{v}}</router-link>
         </div>
     </div>
 </div>

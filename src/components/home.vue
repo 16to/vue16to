@@ -2,11 +2,15 @@
     <div class="home">
         <div class="row">
             <div class="list_title">
-                <div class="left">热点专题<span>专注一流前端开发</span></div>
+                <div class="left">热点专题</div>
                 <div class="right">
-                    <router-link to="/special/?s=type&i=0">前端专题</router-link>/
-                    <router-link to="/special/?s=type&i=1">后端专题</router-link>/
-                    <router-link to="/special/?s=type&i=2">工具专题</router-link>
+                    <router-link to="/special">全部</router-link>
+                    /
+                    <router-link to="/special">全部</router-link>
+                    /
+                    <router-link to="/special/?s=type1">后端专题</router-link>
+                    /
+                    <router-link to="/special/?s=type2">工具专题</router-link>
                 </div>
             </div>
             <div class="list">
@@ -19,7 +23,7 @@
                                     <router-link :to='"/special/detail/"+v.id' :title="v.title" class="title">{{v.title}}</router-link>
                                 </p>
                                 <p>
-                                    <router-link :to='"/special/?s=type&i="+v.type' class="kind">{{v.type|specialToStr}}</router-link><em class="num"><span>{{v.click}}</span>人气</em><em class="time">{{v.addtime|formatTime("YMD")}}</em>
+                                    <router-link :to='"/special/?s=type"+v.type' class="kind">{{v.type|specialToStr}}</router-link><em class="num"><span>{{v.click}}</span>人气</em><em class="time">{{v.addtime|formatTime("YMD")}}</em>
                                 </p>
                             </div>
                         </div>
@@ -32,7 +36,7 @@
                     <div class="hot_list">
                         <div class="hot_title">
                             <span class="hot_title_left">最新项目</span>
-                            <span class="hot_title_right"><router-link to="/works">更多项目</router-link></span>
+                            <span class="hot_title_right"><router-link to="/works">更多</router-link></span>
                         </div>
                         <ul class="hot">
                             <li v-for="(v,k) in comment_list">
@@ -47,7 +51,7 @@
                     <div class="hot_list">
                         <div class="hot_title">
                             <span class="hot_title_left">最新文章</span>
-                            <span class="hot_title_right"><router-link to="/art">更多文章</router-link></span>
+                            <span class="hot_title_right"><router-link to="/art">更多</router-link></span>
                         </div>
                         <ul class="hot">
                             <li v-for="(v,k) in art_list">
@@ -61,7 +65,7 @@
                 </div>
                 <div class="left">
                     <div class="box">
-                    <div class="art_title">技术积累<span>每天进步一点点</span>
+                    <div class="art_title">技术积累
                     <div class="art_title_right">
                     <router-link to="/skill">更多技术</router-link>
                     </div>
