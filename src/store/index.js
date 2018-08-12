@@ -7,6 +7,7 @@ import skill from './modules/skill'
 import special from './modules/special'
 import works from './modules/works'
 import system from './modules/system'
+import search from './modules/search'
 
 Vue.use(Vuex);
 
@@ -19,6 +20,7 @@ export default new Vuex.Store({
         skill,
         special,
         works,
-        system
+        system,
+        search
     }
 })

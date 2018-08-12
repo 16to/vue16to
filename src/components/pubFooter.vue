@@ -7,52 +7,43 @@
         <div class="row">
         <div class="bottom_show">
         <ul>
-            <li class="li_title"><a href="http://www.16to.com/service/about.html">关于</a></li>
+            <li class="li_title">关于</li>
             <li>
-                <a href="http://www.16to.com/service/about.html">关于猩猩</a>
+                <router-link to="/about/me">关于16to</router-link>
             </li>
             <li>
-                <a href="http://www.16to.com/service/disclaimer.html">免责声明</a>
-            </li>
-            <li>
-                <a href="http://www.16to.com/service/map.html">网站地图</a>
+                <router-link to="/about/map">网站地图</router-link>
             </li>
         </ul>
         <ul>
-            <li class="li_title"><a href="http://www.16to.com/">栏目</a></li>
-            <li><a href="http://www.16to.com/skill/">技术积累</a></li>
-            <li><a href="http://www.16to.com/special/">热点专题</a></li>
-            <li><a href="http://www.16to.com/code/">源码分享</a></li>
-            <li><a href="http://www.16to.com/works/">原创作品</a></li>
-            <li><a href="http://www.16to.com/art/">精选文章</a></li>
+            <li class="li_title">栏目</li>
+            <li><router-link to="/skill">技术总结</router-link></li>
+            <li><router-link to="/special">热点专题</router-link></li>
+            <li><router-link to="/works">原创项目</router-link></li>
+            <li><router-link to="/system">技术体系</router-link></li>
         </ul>
         <ul>
-            <li class="li_title"><a href="http://www.16to.com/service/contact.html">联系</a></li>
-            <li><a href="http://www.16to.com/service/contact.html">联系猩猩</a></li>
-            <li><a href="http://www.weibo.com/u/5090861940/">猩猩微博</a></li>
-            <li><a href="javascript:;" id="weixin">猩猩微信</a></li>
-            <li><a href="http://pan.baidu.com/share/home?uk=1128617076">猩猩网盘</a></li>
+            <li class="li_title">联系</li>
+            <li><router-link to="/about/contact">联系16to</router-link></li>
+            <li><router-link to="javascript:;" id="weixin">微信账号</router-link></li>
+            <li><router-link to="javascript:;" id="qq">QQ账号</router-link></li>
         </ul>
         <ul>
-            <li class="li_title"><a href="http://www.16to.com/service/help.html">帮助</a></li>
-            <li><a href="http://www.16to.com/service/help.html">常见问题</a></li>
-            <li><a href="http://www.16to.com/service/question.html">在线提问</a></li>
+            <li class="li_title">帮助</li>
+            <li><router-link to="/about/faq">常见问题</router-link></li>
         </ul>
         <ul>
-            <li class="li_title"><a href="http://www.16to.com/service/link.html">友链</a></li>
-            <!-- <li><a href="http://www.52uh.com" target="_blank">我爱优惠</a></li> -->
-            <li><a href="http://mail.16to.com" target="_blank">猩猩邮箱</a></li>
-            <li><a href="http://www.16to.com/service/link.html">友情链接</a></li>
+            <li class="li_title">友链</li>
+            <li><a href="https://cn.vuejs.org" target="_blank">Vue</a></li>
+            <li><a href="http://gitui.com" target="_blank">Gitui</a></li>
+            <li><a href="http://leastphp.com" target="_blank">LeastPHP</a></li>
+            <li><a href="http://16coder.com" target="_blank">16coder</a></li>
         </ul>
         <ul>
-            <li class="li_title"><a href="http://www.16to.com/">更多</a></li>
-            <li><a href="http://www.16to.com/system/">技术体系</a></li>
-
-            <li><a href="http://www.16to.com/comment/">猩友评论</a></li>
-            <li><a href="http://www.16to.com/tool/">常用工具</a></li>
-
-            <li><a href="http://www.16to.com/design/">设计欣赏</a></li>
-            <li><a href="http://www.16to.com/life/">闲言碎语</a></li>
+            <li class="li_title">更多</li>
+            <li><a href="http://d.16to.com" target="_blank">常用工具</a></li>
+            <li><a href="http://d.16to.com/book" target="_blank">常用书籍</a></li>
+            <li><a href="http://mail.16to.com" target="_blank">16to邮箱</a></li>
         </ul>
         <ul>
             <li class="ewm">
@@ -119,6 +110,7 @@
 }
 .bottom_show ul li{
     line-height:22px;
+    color:#eeeeee;
 }
 .bottom_show ul li a{
     color:#eeeeee;
@@ -127,7 +119,7 @@
     color:#FFBA00;
 }
 .bottom_show ul .li_title{
-
+    color:#fff;
     font-size:13px;
     font-weight:bold;
 }

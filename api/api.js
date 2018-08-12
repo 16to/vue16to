@@ -16,6 +16,7 @@ const special_all=require('./special_all.json');
 const special_detail=require('./special_detail.json');
 const works_all=require('./works_all.json');
 const system_tree=require('./system_tree.json');
+const search_all=require('./search_all.json');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
     extended: false
@@ -98,6 +99,10 @@ app.get('/api/skill_tag', function (req, res) {
 
 app.get('/api/skill_type', function (req, res) {
     res.send(skill_type);
+});
+
+app.get('/api/search', function (req, res) {
+    res.send(search_all);
 });
 
 app.get('/api/system_tree', function (req, res) {

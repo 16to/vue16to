@@ -6,25 +6,32 @@
         </div>
         <div class="tab">
             <router-link to="/index">首页</router-link>
-            <router-link to="/skill">技术</router-link>
+            <router-link to="/skill">总结</router-link>
             <router-link to="/special">专题</router-link>
             <router-link to="/works">项目</router-link>
-            <router-link to="/art">文章</router-link>
-            <router-link to="/system">技术栈</router-link>
+            <router-link to="/system">体系</router-link>
         </div>
         <div class="login">
-            <router-link to="/about">关于</router-link> |  <router-link to="/contact">联系</router-link>
+            <router-link to="/about/me">关于</router-link>
         </div>
         <div class="search">
             <input type="text" name="s" id="seach_input" value="">
-            <span href="javascript:;" id="search_btn"></span>
+            <span @click="search()" @keyup="search()" id="search_btn"></span>
         </div>
     </div>
 </div>
 </template>
 
 <script>
+export default {
+    name: 'pubHeader',
+    methods:{
+        search(){
+            this.$router.push({ path: '/search', query: { s: document.getElementById("seach_input").value }})
+        }
+    }
 
+}
 </script>
 
 <style scoped lang="less">
@@ -58,42 +65,6 @@
     line-height:44px;
     text-align:center;
     color:#000000;
-}
-.tab .nav_more{
-    display:block;
-    float:left;
-    width:55px;
-    height:43px;
-    line-height:44px;
-    text-align:center;
-    color:#000000;
-    padding-right:8px;
-    background:url(/static/img/nav_more.png) 42px 20px no-repeat;
-    cursor:pointer;
-}
-.tab .nav_more:hover{
-    color:#ffffff;
-    background:#2d2d2d url(/static/img/nav_more_a.png) 42px 20px no-repeat;
-}
-.tab .nav_more a{
-    display:block;
-    width:100px;
-    background:#2d2d2d;
-    color:#ABABAB;
-    line-height:35px;
-    height:35px;
-    font-weight:normal;
-    font-size:12px;
-}
-.tab .nav_more a:hover{
-    background:#111111;
-    color:#FFB900;
-}
-.nav_more_content{
-    position:relative;
-    top:-1px;
-    display:block;
-    display:none;
 }
 .tab a:hover{
     background:#2d2d2d;

@@ -65,7 +65,7 @@
                 </div>
                 <div class="left">
                     <div class="box">
-                    <div class="art_title">技术积累
+                    <div class="art_title">技术总结
                     <div class="art_title_right">
                     <router-link to="/skill">更多技术</router-link>
                     </div>

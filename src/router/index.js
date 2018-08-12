@@ -1,16 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import home from '@/components/home'
-import art from '@/components/art'
-import design from '@/components/design'
 import skill from '@/components/skill'
 import special from '@/components/special'
 import works from '@/components/works'
 import system from '@/components/system'
-import about from '@/components/about'
-import contact from '@/components/contact'
 import skillDetail from '@/components/skillDetail'
 import specialDetail from '@/components/specialDetail'
+import search from '@/components/search'
+
+import about from '@/components/about'
+import me from '@/components/about/me'
+import link from '@/components/about/link'
+import contact from '@/components/about/contact'
+import faq from '@/components/about/faq'
+import map from '@/components/about/map'
 
 
 Vue.use(Router)
@@ -21,11 +25,6 @@ export default new Router({
       path: '/index',
       name: 'home',
       component: home
-    },
-    {
-      path: '/design',
-      name: 'design',
-      component: design
     },
     {
       path: '/skill',
@@ -53,24 +52,61 @@ export default new Router({
       component: works
     },
     {
-      path: '/art',
-      name: 'art',
-      component: art
-    },
-    {
       path: '/system',
       name: 'system',
       component: system
     },
     {
-      path: '/about',
-      name: 'about',
-      component: about
+      path: '/search',
+      name: 'search',
+      component: search
     },
     {
-      path: '/contact',
-      name: 'contact',
-      component: contact
+      path: '/about',
+      name: 'about',
+      component: about,
+      children:[
+          {
+             path: 'me',
+             name: 'me',
+             components: {
+                default:about,
+                aboutView:me
+             }
+          },
+          {
+             path: 'map',
+             name: 'map',
+             components: {
+                default:about,
+                aboutView:map
+             }
+          },
+          {
+             path: 'contact',
+             name: 'contact',
+             components: {
+                default:about,
+                aboutView:contact
+             }
+          },
+          {
+             path: 'faq',
+             name: 'faq',
+             components: {
+                default:about,
+                aboutView:faq
+             }
+          },
+          {
+             path: 'link',
+             name: 'link',
+             components: {
+                default:about,
+                aboutView:link
+             }
+          }
+      ]
     },
     {
       path:"*",

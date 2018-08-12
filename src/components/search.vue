@@ -8,17 +8,12 @@
                 </div>
                 <div class="left">
                     <div class="box">
-                    <div class="art_title">技术总结<span>{{search_title}}</span>
-                    <div class="art_title_right">
-                    <router-link to="/skill">全部</router-link>
-                    /
-                    <router-link to="/skill/?s=time">时间</router-link>
-                    /
-                    <router-link to="/skill/?s=hot">热度</router-link>
-                    </div>
+                    <div class="art_title">
+                        搜索结果
+                        <span>{{search_title}}</span>
                     </div>
                     <ul>
-                    <li v-for="v in skill_all">
+                    <li v-for="v in search_all">
                         <div class="time"><span>{{v.addtime|formatTime("Y")}}</span><br><span>{{v.addtime|formatTime("MD")}}</span></div>
                         <div class="content">
                             <div class="title"><router-link :to='"/skill/detail/"+v.id'>{{v.title}}</router-link></div>
@@ -40,45 +35,36 @@ import * as filterFun from "../../static/js/filters.js"
 import pubSkill from './pubSkill'
 import pubTag from './pubTag'
 export default {
-    name: 'skill',
+    name: 'search',
     created(){
-        this.$store.dispatch("getSkillAll",{s:this.$route.query.s,i:this.$route.query.i});
+        this.$store.dispatch("getSearchAll",{s:this.$route.query.s});
     },
     mounted(){
         hotFixed();
     },
     computed:{
-        skill_all(){
-             return this.$store.getters.skillAll;
+        search_all(){
+             return this.$store.getters.searchAll;
         },
         search_title(){
             let str="";
-            if(this.$route.query.s=="type"){
-                str="分类："+filterFun.kindToStr(this.$route.query.i);
-            }
-            else if(this.$route.query.s=="tag"){
-                str="标签："+filterFun.tagToStr(this.$route.query.i);
-            }
-            else if(this.$route.query.s=="hot"){
-                str="热度排序";
-            }
-            else if(this.$route.query.s=="time"){
-                str="时间排序";
+            if(this.$route.query.s){
+                str='"'+this.$route.query.s+'"'+"共"+this.search_all.length+"条记录";
             }
             else{
-                str="全部内容";
+                str='""'+"共"+this.search_all.length+"条记录";
             }
             return str;
         }
     },
     watch:{
         '$route'(to,from){
-            this.getSkillAllByType();
+            this.getSearchAllByS();
         }
     },
     methods:{
-        getSkillAllByType(){
-            this.$store.dispatch("getSkillAll",{s:this.$route.query.s,i:this.$route.query.i});
+        getSearchAllByS(){
+            this.$store.dispatch("getSearchAll",{s:this.$route.query.s});
         }
     },
     components:{

@@ -2,7 +2,7 @@
     <div class="works">
         <div class="row">
             <div class="list_title">
-                <div class="left">项目展示</div>
+                <div class="left">原创项目</div>
             </div>
             <div class="list">
                 <ul>

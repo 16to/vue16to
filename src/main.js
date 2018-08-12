@@ -6,6 +6,7 @@ import router from './router'
 import store from './store/index'
 import publicless from '../static/css/public.less'
 import mainless from '../static/css/main.less'
+import aboutless from '../static/css/about.less'
 import * as filters from '../static/js/filters.js'
 import echarts from "echarts"
 
