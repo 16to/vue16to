@@ -53,7 +53,7 @@ function subStr(str,length){
 
 //返回标签
 function tagToStr(tag){
-    var skill_tag_arr=["PHP","JavaScript","Jquery","CSS","HTML","HTML5","XML","AJAX","SOCKET","ThinkPHP","MySql","Sqlite","Linux","Apahce","XP","WIN7","WIN8","\u5d4c\u5165\u5f0f","VIM","Eclipse","Firefox","IE","\u524d\u7aef\u8bbe\u8ba1","SVN","CSS3","gulp","Sublime"];
+    var skill_tag_arr=["PHP","JavaScript","Jquery","CSS","HTML","HTML5","XML","AJAX","SOCKET","ThinkPHP","MySql","Sqlite","Linux","Apahce","XP","WIN7","WIN8","\u5d4c\u5165\u5f0f","VIM","Eclipse","Firefox","IE","\u524d\u7aef\u8bbe\u8ba1","SVN","CSS3","gulp","Sublime","Vue"];
     return skill_tag_arr[tag];
 }
 
