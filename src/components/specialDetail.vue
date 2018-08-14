@@ -8,13 +8,15 @@
                 </div>
             </div>
             <div class="row">
-                <div class="content" v-html="specialDetail.content">
+                <div class="content">
+                  <vue-markdown :source="specialDetail.content"></vue-markdown>
                 </div>
             </div>
         </div>
     </div>
 </template>
 <script>
+import VueMarkdown from 'vue-markdown' //直接作为一个组件引入
 export default {
     name: 'specialDetail',
     created(){
@@ -33,6 +35,7 @@ export default {
         }
     },
     components:{
+      VueMarkdown
     },
     watch:{
         '$route'(to,from){

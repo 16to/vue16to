@@ -1,5 +1,5 @@
 <template>
-    <div class="detail">
+    <div class="skilldetail">
        <div class="row">
            <div class="detail">
                 <div class="right">
@@ -61,5 +61,4 @@ export default {
 </script>
 
 <style scoped lang="less">
-
 </style>
