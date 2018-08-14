@@ -46,7 +46,17 @@ export default {
     components:{
         pubSkill,
         pubTag
-    }
+    },
+    watch:{
+        '$route'(to,from){
+            this.refreshSkillDetail();
+        }
+    },
+    methods:{
+        refreshSkillDetail(){
+            this.$store.dispatch("getSkillDetail",this.$route.params.id);
+        }
+    },
 }
 </script>
 

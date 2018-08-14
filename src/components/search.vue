@@ -49,10 +49,10 @@ export default {
         search_title(){
             let str="";
             if(this.$route.query.s){
-                str='"'+this.$route.query.s+'"'+"共"+this.search_all.length+"条记录";
+                str='"'+this.$route.query.s+'"'+"共 "+this.search_all.length+" 条记录";
             }
             else{
-                str='""'+"共"+this.search_all.length+"条记录";
+                str='""'+"共 "+this.search_all.length+" 条记录";
             }
             return str;
         }

@@ -33,41 +33,15 @@
             <div class="art">
                 <div class="right">
                     <div class="box">
-                    <div class="hot_list">
-                        <div class="hot_title">
-                            <span class="hot_title_left">最新项目</span>
-                            <span class="hot_title_right"><router-link to="/works">更多</router-link></span>
-                        </div>
-                        <ul class="hot">
-                            <li v-for="(v,k) in comment_list">
-                                <em class="num hotnum" v-if="k<=2">{{k+1}}</em>
-                                <em class="num" v-if="k>2">{{k+1}}</em>
-                                <router-link :to='"/works/detail/"+v.id' :title="v.content">{{(v.name+"："+v.content)|subStr(15)}}</router-link>
-                            </li>
-
-
-                        </ul>
-                    </div>
-                    <div class="hot_list">
-                        <div class="hot_title">
-                            <span class="hot_title_left">最新文章</span>
-                            <span class="hot_title_right"><router-link to="/art">更多</router-link></span>
-                        </div>
-                        <ul class="hot">
-                            <li v-for="(v,k) in art_list">
-                                <em class="num hotnum" v-if="k<=2">{{k+1}}</em>
-                                <em class="num" v-if="k>2">{{k+1}}</em>
-                                <router-link :to='"/art/detail/"+v.id' :title="v.title">{{v.title|subStr(15)}}</router-link>
-                            </li>
-                        </ul>
-                    </div>
+                        <pubSkill></pubSkill>
+                        <pubTag></pubTag>
                     </div>
                 </div>
                 <div class="left">
                     <div class="box">
                     <div class="art_title">技术总结
                     <div class="art_title_right">
-                    <router-link to="/skill">更多技术</router-link>
+                    <router-link to="/skill">更多总结</router-link>
                     </div>
                     </div>
                     <ul>
@@ -88,13 +62,13 @@
 </template>
 
 <script>
+import pubSkill from './pubSkill'
+import pubTag from './pubTag'
 export default {
     name: 'home',
     created(){
         this.$store.dispatch("getSpecial");
         this.$store.dispatch("getSkill");
-        this.$store.dispatch("getArt");
-        this.$store.dispatch("getComment");
     },
     data(){
         return {
@@ -107,17 +81,15 @@ export default {
         },
         skill_list(){
             return this.$store.getters.skillList;
-        },
-        art_list(){
-            return this.$store.getters.artList;
-        },
-        comment_list(){
-            return this.$store.getters.commentList;
         }
 
     },
     filters:{
 
+    },
+    components:{
+        "pubSkill":pubSkill,
+        "pubTag":pubTag
     }
 }
 </script>

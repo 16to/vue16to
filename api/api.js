@@ -4,8 +4,6 @@ const app = express();
 const a=require('./a.json');
 const special_list=require('./special_list.json');
 const skill_list=require('./skill_list.json');
-const art_list=require('./art_list.json');
-const comment_list=require('./comment_list.json');
 const skill_detail =require('./skill_detail.json');
 const skill_tag =require('./skill_tag.json');
 const skill_type =require('./skill_type.json');
@@ -63,12 +61,8 @@ app.get('/api/skill_list', function (req, res) {
     res.send(skill_list);
 });
 
-app.get('/api/art_list', function (req, res) {
-    res.send(art_list);
-});
-
-app.get('/api/comment_list', function (req, res) {
-    res.send(comment_list);
+app.get('/api/skill_list10', function (req, res) {
+    res.send(skill_list);
 });
 
 app.get('/api/works_all', function (req, res) {

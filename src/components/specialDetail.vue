@@ -33,7 +33,17 @@ export default {
         }
     },
     components:{
-    }
+    },
+    watch:{
+        '$route'(to,from){
+            this.refreshSpecialDetail();
+        }
+    },
+    methods:{
+        refreshSpecialDetail(){
+            this.$store.dispatch("getSpecialDetail",this.$route.params.id);
+        }
+    },
 }
 </script>
 

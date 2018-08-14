@@ -4,10 +4,10 @@
             <span class="hot_title_left">最新技术</span>
         </div>
         <ul class="hot">
-            <li v-for="(v,k) in skill_list" :key="v.id">
+            <li v-for="(v,k) in skill_list10" :key="v.id">
                 <em class="num hotnum" v-if="k<=2">{{k+1}}</em>
                 <em class="num" v-if="k>2">{{k+1}}</em>
-                <router-link :to='"/skill/detail/"+v.id' :title="v.title">{{(v.title)|subStr(15)}}</router-link>
+                <router-link :to='"/skill/detail/"+v.id' :title="v.title">{{(v.title)|subStr(17)}}</router-link>
             </li>
         </ul>
     </div>
@@ -16,7 +16,7 @@
 <script>
 export default {
     created(){
-        this.$store.dispatch("getSkill");
+        this.$store.dispatch("getSkill10");
     },
     data(){
         return {
@@ -24,8 +24,8 @@ export default {
         }
     },
     computed:{
-        skill_list(){
-            return this.$store.getters.skillList;
+        skill_list10(){
+            return this.$store.getters.skillList10;
         }
     }
 }
