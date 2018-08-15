@@ -11,6 +11,7 @@ import * as filters from '../static/js/filters.js'
 import echarts from "echarts"
 
 Vue.prototype.$echarts = echarts
+
 //引入公共过滤器
 Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key])

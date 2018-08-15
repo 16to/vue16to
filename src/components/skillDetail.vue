@@ -10,8 +10,9 @@
                     <div class="box">
                     <div class="title">{{skillDetail.title}}</div>
                     <div class="info"><span>发布时间：{{skillDetail.addtime|formatTime("YMDHMS")}}</span><span> 分类：<router-link :to='"/skill/?s=type&i="+skillDetail.type'>{{skillDetail.type|kindToStr}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+skillDetail.tag'>{{skillDetail.tag|tagToStr}}</router-link></span></div>
-                    <div class="content" v-html="skillDetail.content">
 
+                    <div class="content">
+                        <vue-markdown :source="skillDetail.content"></vue-markdown>
                     </div>
                     </div>
 
@@ -22,6 +23,7 @@
     </div>
 </template>
 <script>
+import VueMarkdown from 'vue-markdown' //直接作为一个组件引入
 import {hotFixed} from "../../static/js/fixed.js"
 import pubSkill from './pubSkill'
 import pubTag from './pubTag'
@@ -45,7 +47,8 @@ export default {
     },
     components:{
         pubSkill,
-        pubTag
+        pubTag,
+        VueMarkdown
     },
     watch:{
         '$route'(to,from){
