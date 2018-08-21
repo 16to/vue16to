@@ -11,8 +11,8 @@
                     <div class="title">{{skillDetail.title}}</div>
                     <div class="info"><span>发布时间：{{skillDetail.addtime|formatTime("YMDHMS")}}</span><span> 分类：<router-link :to='"/skill/?s=type&i="+skillDetail.type'>{{skillDetail.type|kindToStr}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+skillDetail.tag'>{{skillDetail.tag|tagToStr}}</router-link></span></div>
 
-                    <div class="content">
-                        <vue-markdown :source="skillDetail.content"></vue-markdown>
+                    <div class="content" v-html="skillDetail.content">
+                      
                     </div>
                     </div>
 
@@ -23,7 +23,8 @@
     </div>
 </template>
 <script>
-import VueMarkdown from 'vue-markdown' //直接作为一个组件引入
+//import VueMarkdown from 'vue-markdown' //直接作为一个组件引入
+import prettify from '../../static/js/prettify.js'
 import {hotFixed} from "../../static/js/fixed.js"
 import pubSkill from './pubSkill'
 import pubTag from './pubTag'
@@ -34,6 +35,11 @@ export default {
     },
     mounted(){
         hotFixed();
+        //console.log(prettify);
+        
+    },
+    updated(){
+        prettyPrint();
     },
     data(){
         return {
@@ -47,8 +53,8 @@ export default {
     },
     components:{
         pubSkill,
-        pubTag,
-        VueMarkdown
+        pubTag
+        //VueMarkdown
     },
     watch:{
         '$route'(to,from){
@@ -63,5 +69,6 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style>
+    @import "../assets/css/prettify.css"
 </style>
