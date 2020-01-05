@@ -1,7 +1,7 @@
 <template>
     <div class="hot_list">
         <div class="hot_title">
-            <span class="hot_title_left">最新技术</span>
+            <span class="hot_title_left">最新总结</span>
         </div>
         <ul class="hot">
             <li v-for="(v,k) in skill_list10" :key="v.id">

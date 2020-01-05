@@ -41,7 +41,17 @@
                     <div class="box">
                     <div class="art_title">技术总结
                     <div class="art_title_right">
-                    <router-link to="/skill">更多总结</router-link>
+                    <router-link to="/skill">全部</router-link>
+                    /
+                    <router-link to="/skill/?s=type&i=0">前端开发</router-link>
+                    /
+                    <router-link to="/skill/?s=type&i=1">后端开发</router-link>
+                    /
+                    <router-link to="/skill/?s=type&i=2">数据库</router-link>
+                    /
+                    <router-link to="/skill/?s=type&i=3">服务器</router-link>
+                    /
+                    <router-link to="/skill/?s=type&i=4">开发工具</router-link>
                     </div>
                     </div>
                     <ul>

@@ -53,13 +53,48 @@ function subStr(str,length){
 
 //返回标签
 function tagToStr(tag){
-    var skill_tag_arr=["PHP","JavaScript","Jquery","CSS","HTML","HTML5","XML","AJAX","SOCKET","ThinkPHP","MySql","Sqlite","Linux","Apahce","XP","WIN7","WIN8","\u5d4c\u5165\u5f0f","VIM","Eclipse","Firefox","IE","\u524d\u7aef\u8bbe\u8ba1","SVN","CSS3","gulp","Sublime","Vue"];
+    var skill_tag_arr=[
+        'PHP',
+        'JavaScript',
+        'Jquery',
+        'CSS',
+        'HTML',
+        'HTML5',
+        'XML',
+        'AJAX',
+        'SOCKET',
+        'ThinkPHP',
+        'MySql',
+        'Sqlite',
+        'Linux',
+        'Apahce',
+        'XP',
+        'WIN7',
+        'WIN8',
+        '嵌入式',
+        'VIM',
+        'Eclipse',
+        'Firefox',
+        'IE',
+        '前端设计',
+        'SVN',
+        'CSS3',
+        'gulp',
+        'Sublime',
+        'Vue',
+    ];
     return skill_tag_arr[tag];
 }
 
 //返回分类
 function kindToStr(kind){
-    var skill_kind_arr=["WEB\u5f00\u53d1","WEB\u8bbe\u8ba1","\u6570\u636e\u5e93","\u670d\u52a1\u5668","\u5f00\u53d1\u5de5\u5177","SEO","C\/C++"];
+    var skill_kind_arr=[
+        '前端开发',
+        '后端开发',
+        '数据库',
+        '服务器',
+        '开发工具',
+    ];
     return skill_kind_arr[kind];
 }
 

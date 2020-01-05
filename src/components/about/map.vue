@@ -5,8 +5,12 @@
         <div class="map_info">
             <h3><router-link to="/skill">技术总结</router-link></h3>
             <div class="map_list">
-                <router-link to="/skill/?s=time">最新总结</router-link>
-                <router-link to="/skill/?s=hot">热门总结</router-link>
+                    <router-link to="/skill">全部</router-link>
+                    <router-link to="/skill/?s=type&i=0">前端开发</router-link>
+                    <router-link to="/skill/?s=type&i=1">后端开发</router-link>
+                    <router-link to="/skill/?s=type&i=2">数据库</router-link>
+                    <router-link to="/skill/?s=type&i=3">服务器</router-link>
+                    <router-link to="/skill/?s=type&i=4">开发工具</router-link>
             </div>
         </div>
         <div class="map_info">
