@@ -1,6 +1,6 @@
-# vue-16to
+# vue16to
 
-> vue-16to
+> vue16to
 
 ## Build Setup
 

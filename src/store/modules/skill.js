@@ -40,7 +40,7 @@ const actions={
             url=url+"&i="+param.i;
         }
         axios.get(url).then((res)=>{
-            commit("SKILL_ALL",res.data);
+            commit("SKILL_ALL",res.data||[]);
         })
     },
     //获取skill detail
