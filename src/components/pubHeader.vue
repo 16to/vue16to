@@ -9,7 +9,7 @@
             <router-link to="/skill">总结</router-link>
             <router-link to="/special">专题</router-link>
             <router-link to="/works">项目</router-link>
-            <router-link to="/system">体系</router-link>
+            <router-link to="/system">技术栈</router-link>
         </div>
         <div class="login">
             <router-link to="/about/me">关于</router-link>

@@ -16,6 +16,7 @@
     "cookie-parser": "^1.4.4",
     "echarts": "^4.1.0",
     "highlight.js": "^9.12.0",
+    "moment": "^2.24.0",
     "prettify": "^0.1.7",
     "vue": "^2.5.2",
     "vue-markdown": "^2.2.4",
