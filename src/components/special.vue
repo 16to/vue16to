@@ -17,7 +17,7 @@
                 <ul>
                     <li v-for="v in special_all">
                         <div class="box">
-                            <router-link :to='"/special/detail/"+v.id' class="img"><img :src="v.img|add16to" :title="v.title"></router-link>
+                            <router-link :to='"/special/detail/"+v.id' class="img"><img :src="v.img|imgAddPath" :title="v.title"></router-link>
                             <div class="content">
                                 <p>
                                     <router-link :to='"/special/detail/"+v.id' :title="v.title" class="title">{{v.title}}</router-link>

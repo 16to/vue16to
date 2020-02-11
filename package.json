@@ -7,7 +7,7 @@
   "scripts": {
     "api": "nodemon api/api.js -w api",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "debug": "npm run api | npm run dev",
+    "debug": "npm run dev",
     "build": "node build/build.js",
     "server": "node app.js"
   },

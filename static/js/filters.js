@@ -35,15 +35,20 @@ function formatTime(value,type){
     return dataTime;
 };
 
-//增加http://www.16to.com
-function add16to(url){
-    return "http://www.16to.com"+url;
+//增加http://g.16to.com
+function imgAddPath(url){
+    return "http://g.16to.com/upload/"+url;
 }
 
 //删除html标签
 function stripHTML(str){
     var reTag = /<(?:.|\s)*?>/g;
     return str.replace(reTag,"");
+}
+
+// 转译回html
+function unescapeHTML(str){
+    return unescape(str);
 }
 
 //截取字符串
@@ -110,4 +115,4 @@ function worksToStr(type){
     return works_type_arr[type];
 }
 
-export {formatTime,add16to,stripHTML,subStr,tagToStr,kindToStr,specialToStr,worksToStr}
+export {formatTime,imgAddPath,stripHTML,unescapeHTML,subStr,tagToStr,kindToStr,specialToStr,worksToStr}

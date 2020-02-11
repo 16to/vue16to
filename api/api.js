@@ -103,6 +103,6 @@ app.get('/api/system_tree', function (req, res) {
     res.send(system_tree);
 });
 //init
-var server = app.listen(3000, function () {
+var server = app.listen(3001, function () {
     console.log('listening on port %d', server.address().port);
 });

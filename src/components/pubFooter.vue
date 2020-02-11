@@ -50,7 +50,7 @@
                 <img src="http://www.16to.com/public/img/2wm.png">
             </li>
             <li class="copy">
-            <p>Copyright © 2013-{{copyTime}} <a href="http://www.16to.com/">一路向前</a></p>
+            <p>Copyright © 2013-{{copyTime}} <a href="http://admin.16to.com/" target="_blank">一路向前</a></p>
             <p>2013-{{copyTime}} 浙ICP备13020845号-3</p>
             </li>
         </ul>
@@ -63,7 +63,7 @@
 <script>
 import moment from 'moment'
 export default {
-    name:"footer",
+    name:"pubHeader",
     computed:{
         copyTime(){
             return moment().format('YYYY')

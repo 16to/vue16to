@@ -7,7 +7,7 @@
             <div class="list">
                 <ul>
                     <li v-for="v in works_all">
-                        <a :href="v.url" target="_blank" class="img"><img :src="v.img|add16to" :title="v.title"/></a>
+                        <a :href="v.url" target="_blank" class="img"><img :src="v.img|imgAddPath" :title="v.title"/></a>
                     <div class="content">
                         <p><a :href="v.url" target="_blank" :title="v.title" class="title">{{v.title}}</a></p>
                         <p class="kind">{{v.type|worksToStr}} <span class="tag">{{v.tag}}</span></p>

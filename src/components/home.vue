@@ -17,7 +17,7 @@
                 <ul>
                     <li v-for="v in special_list">
                         <div class="box">
-                            <router-link :to='"/special/detail/"+v.id' class="img"><img :src="v.img|add16to" :title="v.title"></router-link>
+                            <router-link :to='"/special/detail/"+v.id' class="img"><img :src="v.img|imgAddPath" :title="v.title"></router-link>
                             <div class="content">
                                 <p>
                                     <router-link :to='"/special/detail/"+v.id' :title="v.title" class="title">{{v.title}}</router-link>
@@ -60,7 +60,7 @@
                         <div class="content">
                             <div class="title"><router-link :to='"/skill/detail/"+v.id'>{{v.title}}</router-link></div>
                             <div class="info"><span> 分类：<router-link :to='"/skill/?s=type&i="+v.type'>{{v.type|kindToStr}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+v.tag'>{{v.tag|tagToStr}}</router-link></span><span><router-link :to='"/skill/detail/"+v.id'>浏览({{v.click}})</router-link></span></div>
-                            <div class="des">{{v.content|stripHTML|subStr(180)}}</div>
+                            <div class="des">{{v.content|unescapeHTML|stripHTML|subStr(180)}}</div>
                         </div>
                     </li>
                     </ul>

@@ -8,7 +8,7 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:3000
 npm run dev
 
 # build for production with minification
@@ -28,6 +28,12 @@ npm install vuex -S
 npm install axios -S
 npm run dev
 ```
+
+## 启动项目
+pm2 start app.js -n vue16to
+
+## 端口
+3000
 
 ## 目录结构
 ```
@@ -76,6 +82,3 @@ a.json文件:
 ```
 
 ## BUG
-专题--支持Markdown
-总结--支持hightline
-增加技术栈链接
