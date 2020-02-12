@@ -35,6 +35,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
