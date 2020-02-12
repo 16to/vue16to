@@ -1,4 +1,5 @@
 const express = require("express");
+const compression = require('compression');
 const http = require("http");
 const path = require("path");
 const bodyparser = require("body-parser");
@@ -10,6 +11,7 @@ const PORT = 3000;
 const app = express();
 app.use(bodyparser.json());
 app.use(cookieParser());
+app.use(compression());
 
 const httpServer = http.createServer(app);
 
