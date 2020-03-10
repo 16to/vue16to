@@ -45,7 +45,7 @@ const actions={
     },
     //获取skill detail
     getSkillDetail({commit,state},id){
-        console.log(id);
+        // console.log(id);
         axios.get("/api/skill_detail/"+id).then((res)=>{
             commit("SKILL_DETAIL",res.data);
         })

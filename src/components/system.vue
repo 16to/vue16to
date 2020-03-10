@@ -35,7 +35,7 @@ export default {
         drawTree(){
             var myChart = this.$echarts.init(document.getElementById('main'));
             var treeData=this.tree_data;
-            console.log([treeData]);
+            // console.log([treeData]);
             myChart.setOption({
                 series: [
                     {

@@ -17,7 +17,7 @@
                         <div class="time"><span>{{v.addtime|formatTime("Y")}}</span><br><span>{{v.addtime|formatTime("MD")}}</span></div>
                         <div class="content">
                             <div class="title"><router-link :to='"/skill/detail/"+v.id'>{{v.title}}</router-link></div>
-                            <div class="info"><span> 分类：<router-link :to='"/skill/?s=type&i="+v.type'>{{v.type|kindToStr}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+v.tag'>{{v.tag|tagToStr}}</router-link></span><span><router-link :to='"/skill/detail/"+v.id'>浏览({{v.click}})</router-link></span></div>
+                            <div class="info"><span> 分类：<router-link :to='"/skill/?s=type&i="+v.type'>{{kindToStr(v.type)}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+v.tag'>{{tagToStr(v.tag)}}</router-link></span><span><router-link :to='"/skill/detail/"+v.id'>浏览({{v.click}})</router-link></span></div>
                             <div class="des">{{v.content|unescapeHTML|stripHTML|subStr(180)}}</div>
                         </div>
                     </li>
@@ -65,6 +65,12 @@ export default {
     methods:{
         getSearchAllByS(){
             this.$store.dispatch("getSearchAll",{s:this.$route.query.s});
+        },
+        tagToStr(tag){
+            return this.$store.getters.skillTag[tag]
+        },
+        kindToStr(type){
+            return this.$store.getters.skillType[type]
         }
     },
     components:{

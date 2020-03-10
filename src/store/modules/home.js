@@ -20,7 +20,7 @@ const actions={
     //获取专题
     getSpecial({commit,state}){
         axios.get("/api/special_list").then((res)=>{
-             console.log(res.data);
+            // console.log(res.data);
             commit("SPECIAL_LIST",res.data);
         })
     },

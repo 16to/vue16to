@@ -9,7 +9,7 @@
                 <div class="left">
                     <div class="box">
                     <div class="title">{{skillDetail.title}}</div>
-                    <div class="info"><span>发布时间：{{skillDetail.addtime|formatTime("YMDHMS")}}</span><span> 分类：<router-link :to='"/skill/?s=type&i="+skillDetail.type'>{{skillDetail.type|kindToStr}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+skillDetail.tag'>{{skillDetail.tag|tagToStr}}</router-link></span></div>
+                    <div class="info"><span>发布时间：{{skillDetail.addtime|formatTime("YMDHMS")}}</span><span> 分类：<router-link :to='"/skill/?s=type&i="+skillDetail.type'>{{kindToStr(skillDetail.type)}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+skillDetail.tag'>{{tagToStr(skillDetail.tag)}}</router-link></span></div>
 
                     <div class="content">
                       <vue-markdown :source="skillDetail.content|unescapeHTML"></vue-markdown>
@@ -64,6 +64,12 @@ export default {
     methods:{
         refreshSkillDetail(){
             this.$store.dispatch("getSkillDetail",this.$route.params.id);
+        },
+        tagToStr(tag){
+            return this.$store.getters.skillTag[tag]
+        },
+        kindToStr(type){
+            return this.$store.getters.skillType[type]
         }
     },
 }

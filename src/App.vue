@@ -11,6 +11,12 @@ import pubheader from './components/pubHeader.vue'
 import pubfooter from './components/pubFooter.vue'
 export default {
   name: 'App',
+  created(){
+    this.$store.dispatch("getSkillTag");
+    this.$store.dispatch("getSkillType");
+    this.$store.dispatch("getSpecialType");
+    this.$store.dispatch("getWorksType");
+  },
   components:{
     'pub-header':pubheader,
     'pub-footer':pubfooter,

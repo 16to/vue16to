@@ -12,8 +12,6 @@
 <script>
 export default {
     created(){
-        this.$store.dispatch("getSkillTag");
-        this.$store.dispatch("getSkillType");
     },
     data(){
         return {
