@@ -931,6 +931,7 @@ ul {
 img {
   display: inline-block;
   border: none;
+  border-radius: 3px;
 }
 i {
   display: inline-block;
@@ -945,7 +946,7 @@ table {
 h4,
 h5,
 h6 {
-  font-size: 100 % ;
+  font-size: 100% ;
   font-weight: 400;
 }
 button,
