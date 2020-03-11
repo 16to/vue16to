@@ -7,6 +7,8 @@ const skill_list=require('./skill_list.json');
 const skill_detail =require('./skill_detail.json');
 const skill_tag =require('./skill_tag.json');
 const skill_type =require('./skill_type.json');
+const special_type =require('./special_type.json');
+const works_type =require('./works_type.json');
 const skill_all =require('./skill_all.json');
 const skill_all_tag =require('./skill_all_tag.json');
 const skill_all_type =require('./skill_all_type.json');
@@ -27,50 +29,47 @@ app.use(bodyParser.json());
 // req.body ex: {"cc": 0}
 
 // get demo
-app.get('/api/a', function (req, res) {
+app.get('/16to/a', function (req, res) {
     res.send(a);
 });
 //post demo
-app.post('/api/a', function (req, res) {
-    console.log(req);
+app.post('/16to/a', function (req, res) {
     res.send(a);
 });
 //delete demo
-app.delete('/api/a', function (req, res) {
+app.delete('/16to/a', function (req, res) {
     res.send(a);
 });
 //put demo
-app.put('/api/b/:id', function (req, res) {
-    console.log(req);
+app.put('/16to/b/:id', function (req, res) {
     res.send(a);
 });
 
-app.get('/api/special_list', function (req, res) {
+app.get('/16to/special_list', function (req, res) {
     res.send(special_list);
 });
 
-app.get('/api/special_detail/:id', function (req, res) {
+app.get('/16to/special_detail/:id', function (req, res) {
     res.send(special_detail);
 });
 
-app.get('/api/special_all', function (req, res) {
+app.get('/16to/special_all', function (req, res) {
     res.send(special_all);
 });
 
-app.get('/api/skill_list', function (req, res) {
+app.get('/16to/skill_list', function (req, res) {
     res.send(skill_list);
 });
 
-app.get('/api/skill_list10', function (req, res) {
+app.get('/16to/skill_list10', function (req, res) {
     res.send(skill_list);
 });
 
-app.get('/api/works_all', function (req, res) {
+app.get('/16to/works_all', function (req, res) {
     res.send(works_all);
 });
 
-app.get('/api/skill_all', function (req, res) {
-    console.log(req.query);
+app.get('/16to/skill_all', function (req, res) {
     if(req.query.s=="tag"){
         res.send(skill_all_tag);
     }
@@ -83,23 +82,31 @@ app.get('/api/skill_all', function (req, res) {
 
 });
 
-app.get('/api/skill_detail/:id', function (req, res) {
+app.get('/16to/skill_detail/:id', function (req, res) {
     res.send(skill_detail);
 });
 
-app.get('/api/skill_tag', function (req, res) {
+app.get('/16to/skill_tag', function (req, res) {
     res.send(skill_tag);
 });
 
-app.get('/api/skill_type', function (req, res) {
+app.get('/16to/skill_type', function (req, res) {
     res.send(skill_type);
 });
 
-app.get('/api/search', function (req, res) {
+app.get('/16to/special_type', function (req, res) {
+    res.send(special_type);
+});
+
+app.get('/16to/works_type', function (req, res) {
+    res.send(works_type);
+});
+
+app.get('/16to/search', function (req, res) {
     res.send(search_all);
 });
 
-app.get('/api/system_tree', function (req, res) {
+app.get('/16to/system_tree', function (req, res) {
     res.send(system_tree);
 });
 //init

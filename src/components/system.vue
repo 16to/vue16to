@@ -80,7 +80,7 @@ export default {
                     return;
                 }
                 var url=params.value;
-                window.open(url)
+                location.href=url;
             })
 
         }
