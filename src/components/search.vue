@@ -13,7 +13,15 @@
                         <span>{{search_title}}</span>
                     </div>
                     <ul>
-                    <li v-for="v in search_all">
+                    <li v-for="v in search_special">
+                        <div class="time"><span>{{v.addtime|formatTime("Y")}}</span><br><span>{{v.addtime|formatTime("MD")}}</span></div>
+                        <div class="content">
+                            <div class="title"><span class="search_special">专题</span><router-link :to='"/special/detail/"+v.id'>{{v.title}}</router-link></div>
+                            <div class="info"><span> 分类：<router-link :to='"/special/?s=type"+v.type'>{{v.type|kindToStr}}</router-link></span><span><router-link :to='"/special/detail/"+v.id'>浏览({{v.click}})</router-link></span></div>
+                            <div class="des">{{v.content|stripHTML|subStr(180)}}</div>
+                        </div>
+                    </li>
+                    <li v-for="v in search_skill">
                         <div class="time"><span>{{v.addtime|formatTime("Y")}}</span><br><span>{{v.addtime|formatTime("MD")}}</span></div>
                         <div class="content">
                             <div class="title"><router-link :to='"/skill/detail/"+v.id'>{{v.title}}</router-link></div>
@@ -37,7 +45,9 @@ import pubTag from './pubTag'
 export default {
     name: 'search',
     created(){
-        this.$store.dispatch("getSearchAll",{s:this.$route.query.s});
+        this.$store.dispatch("getSearchSkill",{s:this.$route.query.s});
+        this.$store.dispatch("getSearchSpecial",{s:this.$route.query.s});
+        // this.$store.dispatch("getSearchAll",{s:this.$route.query.s});
     },
     mounted(){
         hotFixed();
@@ -46,13 +56,20 @@ export default {
         search_all(){
              return this.$store.getters.searchAll;
         },
+        search_skill(){
+            return this.$store.getters.searchSkill;
+        },
+        search_special(){
+            return this.$store.getters.searchSpecial;
+        },
         search_title(){
             let str="";
+            const totle = this.search_skill.length+this.search_special.length;
             if(this.$route.query.s){
-                str='"'+this.$route.query.s+'"'+"共 "+this.search_all.length+" 条记录";
+                str='"'+this.$route.query.s+'"'+"共 "+totle+" 条记录";
             }
             else{
-                str='""'+"共 "+this.search_all.length+" 条记录";
+                str='""'+"共 "+totle+" 条记录";
             }
             return str;
         }
@@ -64,7 +81,9 @@ export default {
     },
     methods:{
         getSearchAllByS(){
-            this.$store.dispatch("getSearchAll",{s:this.$route.query.s});
+            this.$store.dispatch("getSearchSkill",{s:this.$route.query.s});
+            this.$store.dispatch("getSearchSpecial",{s:this.$route.query.s});
+            // this.$store.dispatch("getSearchAll",{s:this.$route.query.s});
         }
     },
     components:{
