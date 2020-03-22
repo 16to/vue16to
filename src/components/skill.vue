@@ -28,8 +28,8 @@
                         <div class="time"><span>{{v.addtime|formatTime("Y")}}</span><br><span>{{v.addtime|formatTime("MD")}}</span></div>
                         <div class="content">
                             <div class="title"><router-link :to='"/skill/detail/"+v.id'>{{v.title}}</router-link></div>
-                            <div class="info"><span> 分类：<router-link :to='"/skill/?s=type&i="+v.type'>{{v.type|kindToStr}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+v.tag'>{{v.tag|tagToStr}}</router-link></span><span><router-link :to='"/skill/detail/"+v.id'>浏览({{v.click}})</router-link></span></div>
-                            <div class="des">{{v.content|stripHTML|subStr(180)}}</div>
+                            <div class="info"><span> 分类：<router-link :to='"/skill/?s=type&i="+v.type'>{{kindToStr(v.type)}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+v.tag'>{{tagToStr(v.tag)}}</router-link></span><span><router-link :to='"/skill/detail/"+v.id'>浏览({{v.click}})</router-link></span></div>
+                            <div class="des">{{v.content|unescapeHTML|stripHTML|subStr(180)}}</div>
                         </div>
                     </li>
                     </ul>
@@ -42,7 +42,6 @@
 
 <script>
 import {hotFixed} from "../../static/js/fixed.js"
-import * as filterFun from "../../static/js/filters.js"
 import pubSkill from './pubSkill'
 import pubTag from './pubTag'
 export default {
@@ -60,10 +59,10 @@ export default {
         search_title(){
             let str="";
             if(this.$route.query.s=="type"){
-                str="分类："+filterFun.kindToStr(this.$route.query.i);
+                str="分类："+this.kindToStr(this.$route.query.i);
             }
             else if(this.$route.query.s=="tag"){
-                str="标签："+filterFun.tagToStr(this.$route.query.i);
+                str="标签："+this.tagToStr(this.$route.query.i);
             }
             else if(this.$route.query.s=="hot"){
                 str="热度排序";
@@ -85,6 +84,12 @@ export default {
     methods:{
         getSkillAllByType(){
             this.$store.dispatch("getSkillAll",{s:this.$route.query.s,i:this.$route.query.i});
+        },
+        tagToStr(tag){
+            return this.$store.getters.skillTag[tag]
+        },
+        kindToStr(type){
+            return this.$store.getters.skillType[type]
         }
     },
     components:{

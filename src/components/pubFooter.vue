@@ -20,13 +20,13 @@
             <li><router-link to="/skill">技术总结</router-link></li>
             <li><router-link to="/special">热点专题</router-link></li>
             <li><router-link to="/works">原创项目</router-link></li>
-            <li><router-link to="/system">技术体系</router-link></li>
+            <li><router-link to="/system">技术栈</router-link></li>
         </ul>
         <ul>
             <li class="li_title">联系</li>
             <li><router-link to="/about/contact">联系16to</router-link></li>
-            <li><router-link to="javascript:;" id="weixin">微信账号</router-link></li>
-            <li><router-link to="javascript:;" id="qq">QQ账号</router-link></li>
+            <li><router-link to="/about/contact" id="weixin">微信账号</router-link></li>
+            <li><router-link to="/about/contact" id="qq">QQ账号</router-link></li>
         </ul>
         <ul>
             <li class="li_title">帮助</li>
@@ -47,11 +47,11 @@
         </ul>
         <ul>
             <li class="ewm">
-                <img src="http://www.16to.com/public/img/2wm.png">
+                <img src="/static/img/2wm.png">
             </li>
             <li class="copy">
-            <p>Copyright © 2013-2018 <a href="http://www.16to.com/">一路向前</a></p>
-            <p>2013-2018 浙ICP备13020845号-3</p>
+            <p>Copyright © 2013-{{copyTime}} <a href="http://admin.16to.com" target="_blank">一路向前</a></p>
+            <p>2013-{{copyTime}} 浙ICP备13020845号-3</p>
             </li>
         </ul>
         </div>
@@ -61,7 +61,15 @@
 </template>
 
 <script>
-
+import moment from 'moment'
+export default {
+    name:"pubHeader",
+    computed:{
+        copyTime(){
+            return moment().format('YYYY')
+        }
+    }
+}
 </script>
 
 <style scoped lang="less">

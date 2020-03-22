@@ -17,13 +17,13 @@
                 <ul>
                     <li v-for="v in special_all">
                         <div class="box">
-                            <router-link :to='"/special/detail/"+v.id' class="img"><img :src="v.img|add16to" :title="v.title"></router-link>
+                            <router-link :to='"/special/detail/"+v.id' class="img"><img :src="v.img|imgAddPath" :title="v.title"></router-link>
                             <div class="content">
                                 <p>
                                     <router-link :to='"/special/detail/"+v.id' :title="v.title" class="title">{{v.title}}</router-link>
                                 </p>
                                 <p>
-                                    <router-link :to='"/special/?s=type"+v.type' class="kind">{{v.type|specialToStr}}</router-link><em class="num"><span>{{v.click}}</span>人气</em><em class="time">{{v.addtime|formatTime("YMD")}}</em>
+                                    <router-link :to='"/special/?s=type"+v.type' class="kind">{{specialToStr(v.type)}}</router-link><em class="num"><span>{{v.click}}</span>人气</em><em class="time">{{v.addtime|formatTime("YMD")}}</em>
                                 </p>
                             </div>
                         </div>
@@ -38,6 +38,10 @@ export default {
     name: 'special',
     created(){
         this.$store.dispatch("getSpecialAll",{s:this.$route.query.s});
+
+    },
+    mounted(){
+        
     },
     computed:{
         special_all(){
@@ -68,7 +72,10 @@ export default {
     methods:{
         getSpecialAllByType(){
             this.$store.dispatch("getSpecialAll",{s:this.$route.query.s});
-        }
+        },
+        specialToStr(type){
+            return this.$store.getters.specialType[type]
+        },
     }
 }
 </script>
