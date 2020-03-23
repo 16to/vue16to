@@ -18,7 +18,7 @@
                         <div class="content">
                             <div class="title"><span class="search_special">专题</span><router-link :to='"/special/detail/"+v.id'>{{v.title}}</router-link></div>
                             <div class="info"><span> 分类：<router-link :to='"/special/?s=type"+v.type'>{{v.type|kindToStr}}</router-link></span><span><router-link :to='"/special/detail/"+v.id'>浏览({{v.click}})</router-link></span></div>
-                            <div class="des">{{v.content|stripHTML|subStr(180)}}</div>
+                            <div class="des">{{v.content|unescapeHTML|stripHTML|subStr(180)}}</div>
                         </div>
                     </li>
                     <li v-for="v in search_skill">

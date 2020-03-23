@@ -12,7 +12,7 @@
                     <div class="info"><span>发布时间：{{skillDetail.addtime|formatTime("YMDHMS")}}</span><span> 分类：<router-link :to='"/skill/?s=type&i="+skillDetail.type'>{{kindToStr(skillDetail.type)}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+skillDetail.tag'>{{tagToStr(skillDetail.tag)}}</router-link></span></div>
 
                     <div class="content">
-                      <vue-markdown :source="skillDetail.content|unescapeHTML"></vue-markdown>
+                      <div v-html="msg" v-highlight>{{msg}}</div>
                     </div>
                     </div>
 
@@ -23,7 +23,6 @@
     </div>
 </template>
 <script>
-import VueMarkdown from 'vue-markdown' //直接作为一个组件引入
 import prettify from '../../static/js/prettify.js'
 import {hotFixed} from "../../static/js/fixed.js"
 import pubSkill from './pubSkill'
@@ -43,7 +42,8 @@ export default {
     },
     data(){
         return {
-            msg: "skillDetail"
+            content:"```html \n",
+            msg:'```html \n<form method="GET" action="/transferFunds ">\n cash: <input type="text" name="cash"> \n to: <input type=" text " name=“to"> \n<input type="submit" name="action" value=""> \n</form> \n```'
         }
     },
     computed:{
@@ -54,7 +54,6 @@ export default {
     components:{
         pubSkill,
         pubTag,
-        VueMarkdown
     },
     watch:{
         '$route'(to,from){

@@ -8,9 +8,10 @@ import publicless from '../static/css/public.less'
 import mainless from '../static/css/main.less'
 import aboutless from '../static/css/about.less'
 import * as filters from '../static/js/filters.js'
-// import echarts from "echarts"
 
-// Vue.prototype.$echarts = echarts
+import 'highlight.js/styles/default.css'
+import Highlight from 'vue-markdown-highlight'
+Vue.use(Highlight)
 
 let echarts = require('echarts/lib/echarts')
 // 引入饼状图组件

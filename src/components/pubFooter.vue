@@ -84,7 +84,7 @@ export default {
     position: relative;
     top: 0px;
     z-index: 1;
-    height:44px;
+    height:42px;
     width: 1000px;
     margin: 0px auto;
 }
