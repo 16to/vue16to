@@ -9,6 +9,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "server": "node app.js",
     "build": "node build/build.js",
+    "analyz": "NODE_ENV=production npm_config_report=true npm run build",
     "debug": "npm-run-all --parallel dev api"
   },
   "dependencies": {

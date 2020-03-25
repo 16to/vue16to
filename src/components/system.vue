@@ -11,6 +11,13 @@
     </div>
 </template>
 <script>
+let echarts = require('echarts/lib/echarts')
+// 引入饼状图组件
+require('echarts/lib/chart/tree')
+// 引入提示框和title组件，图例
+// require('echarts/lib/component/tooltip')
+// require('echarts/lib/component/title')
+// require('echarts/lib/component/legend')
 export default {
     name: 'system',
     created(){
@@ -33,7 +40,7 @@ export default {
     },
     methods:{
         drawTree(){
-            var myChart = this.$echarts.init(document.getElementById('main'));
+            var myChart = echarts.init(document.getElementById('main'));
             var treeData=this.tree_data;
             // console.log([treeData]);
             myChart.setOption({
