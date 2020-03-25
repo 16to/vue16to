@@ -51,7 +51,7 @@
             </li>
             <li class="copy">
             <p>Copyright © 2013-{{copyTime}} <a href="http://admin.16to.com" target="_blank">一路向前</a></p>
-            <p>2013-{{copyTime}} 浙ICP备13020845号-3</p>
+            <p>2013-{{copyTime}} <a href="http://www.beian.miit.gov.cn" target="_blank">浙ICP备13020845号-3</a></p>
             </li>
         </ul>
         </div>

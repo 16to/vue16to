@@ -17,12 +17,16 @@
 </template>
 <script>
 import VueMarkdown from 'vue-markdown' //直接作为一个组件引入
+import highlightCode from '../../static/js/highlightCode.js'
 export default {
     name: 'specialDetail',
     created(){
         this.$store.dispatch("getSpecialDetail",this.$route.params.id);
     },
     mounted(){
+    },
+    updated(){
+        highlightCode();
     },
     data(){
         return {

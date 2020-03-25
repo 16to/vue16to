@@ -4,14 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/index'
-import publicless from '../static/css/public.less'
-import mainless from '../static/css/main.less'
-import aboutless from '../static/css/about.less'
 import * as filters from '../static/js/filters.js'
+import '../static/css/public.less'
+import '../static/css/main.less'
+import '../static/css/about.less'
 
-import 'highlight.js/styles/default.css'
-import Highlight from 'vue-markdown-highlight'
-Vue.use(Highlight)
 
 let echarts = require('echarts/lib/echarts')
 // 引入饼状图组件
