@@ -1,13 +1,13 @@
 
-#header[data-v-ca3e9be4]{
+#header[data-v-c6f50fe8]{
     height: 45px;
 }
-#content[data-v-ca3e9be4]{
+#content[data-v-c6f50fe8]{
     margin-top: 45px;
     background-color: #F4F4F4;
 }
 
-.head[data-v-465d3329] {
+.head[data-v-4b6533bc] {
   position: fixed;
   top: 0px;
   z-index: 9999;
@@ -16,20 +16,20 @@
   margin-top: 0px;
   background: url(/static/img/top_bg.png);
 }
-.nav[data-v-465d3329] {
+.nav[data-v-4b6533bc] {
   height: 45px;
 }
-.logo[data-v-465d3329] {
+.logo[data-v-4b6533bc] {
   float: left;
   width: 150px;
   height: 38px;
   margin-top: 2px;
 }
-.tab[data-v-465d3329] {
+.tab[data-v-4b6533bc] {
   font-size: 14px;
   font-weight: bold;
 }
-.tab a[data-v-465d3329] {
+.tab a[data-v-4b6533bc] {
   display: block;
   float: left;
   width: 55px;
@@ -38,23 +38,23 @@
   text-align: center;
   color: #000000;
 }
-.tab a[data-v-465d3329]:hover {
+.tab a[data-v-4b6533bc]:hover {
   background: #2d2d2d;
   color: #ffffff;
   text-decoration: none;
 }
-.tab .router-link-exact-active[data-v-465d3329],
-.tab .router-link-active[data-v-465d3329] {
+.tab .router-link-exact-active[data-v-4b6533bc],
+.tab .router-link-active[data-v-4b6533bc] {
   background: #2d2d2d;
   color: #ffffff;
 }
-.search[data-v-465d3329] {
+.search[data-v-4b6533bc] {
   float: right;
   width: 180px;
   height: 25px;
   margin-top: 8px;
 }
-#seach_input[data-v-465d3329] {
+#seach_input[data-v-4b6533bc] {
   float: left;
   width: 130px;
   height: 25px;
@@ -69,7 +69,7 @@
   border-right: 0px;
   outline: none;
 }
-#search_btn[data-v-465d3329] {
+#search_btn[data-v-4b6533bc] {
   float: left;
   display: block;
   height: 25px;
@@ -79,28 +79,28 @@
   margin-top: 0px;
   background: #F6F6F6 url(/static/img/search_btn.png) no-repeat;
 }
-#search_btn[data-v-465d3329]:hover {
+#search_btn[data-v-4b6533bc]:hover {
   background-position: 0px -25px;
 }
-.login[data-v-465d3329] {
+.login[data-v-4b6533bc] {
   float: right;
   margin-left: 20px;
   line-height: 44px;
   font-size: 12px;
   color: #666666;
 }
-.login a[data-v-465d3329] {
+.login a[data-v-4b6533bc] {
   color: #2D2D2D;
 }
 
-.row[data-v-038d0421] {
+.row[data-v-e6ce7da4] {
   text-align: center;
 }
-.bottom_bg[data-v-038d0421] {
+.bottom_bg[data-v-e6ce7da4] {
   background: #7A808A url(/static/img/bottom_bg.png);
   border-top: 1px #cccccc solid;
 }
-.index_bottom[data-v-038d0421] {
+.index_bottom[data-v-e6ce7da4] {
   position: relative;
   top: 0px;
   z-index: 1;
@@ -108,57 +108,57 @@
   width: 1000px;
   margin: 0px auto;
 }
-.index_bottom span[data-v-038d0421] {
+.index_bottom span[data-v-e6ce7da4] {
   display: block;
   width: 220px;
   height: 40px;
   margin: 0px auto;
   background: url(/static/img/bottom_title.png) no-repeat;
 }
-#bottom[data-v-038d0421] {
+#bottom[data-v-e6ce7da4] {
   font-size: 12px;
   height: 145px;
   padding-top: 10px;
   background: #7A808A;
 }
-.bottom_show[data-v-038d0421] {
+.bottom_show[data-v-e6ce7da4] {
   width: 100%;
   overflow: hidden;
   display: inline-block;
 }
-.bottom_show ul[data-v-038d0421]:last-child {
+.bottom_show ul[data-v-e6ce7da4]:last-child {
   width: 28%;
 }
-.bottom_show ul[data-v-038d0421] {
+.bottom_show ul[data-v-e6ce7da4] {
   float: left;
   margin: 0px auto;
   width: 12%;
   text-align: center;
 }
-.bottom_show ul li[data-v-038d0421] {
+.bottom_show ul li[data-v-e6ce7da4] {
   line-height: 22px;
   color: #eeeeee;
 }
-.bottom_show ul li a[data-v-038d0421] {
+.bottom_show ul li a[data-v-e6ce7da4] {
   color: #eeeeee;
 }
-.bottom_show ul li a[data-v-038d0421]:hover {
+.bottom_show ul li a[data-v-e6ce7da4]:hover {
   color: #FFBA00;
 }
-.bottom_show ul .li_title[data-v-038d0421] {
+.bottom_show ul .li_title[data-v-e6ce7da4] {
   color: #fff;
   font-size: 13px;
   font-weight: bold;
 }
-.bottom_show ul .li_title a[data-v-038d0421] {
+.bottom_show ul .li_title a[data-v-e6ce7da4] {
   color: #ffffff;
 }
-.bottom_show .copy[data-v-038d0421] {
+.bottom_show .copy[data-v-e6ce7da4] {
   margin-top: 5px;
   line-height: 15px;
   color: #ffffff;
 }
-.bottom_show .copy span[data-v-038d0421] {
+.bottom_show .copy span[data-v-e6ce7da4] {
   margin: 0px 5px;
 }
 
@@ -1735,7 +1735,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   vertical-align: middle;
 }
 /*special detail*/
-.special_detail .title[data-v-f6410f6c] {
+.special_detail .title[data-v-4f410778] {
   overflow: hidden;
   width: 100%;
   height: 260px;
@@ -1746,15 +1746,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   text-align: center;
   color: #FFFFFF;
 }
-.special_detail .title h1[data-v-f6410f6c] {
+.special_detail .title h1[data-v-4f410778] {
   margin-top: 40px;
   font-size: 48px;
 }
-.special_detail .title h2[data-v-f6410f6c] {
+.special_detail .title h2[data-v-4f410778] {
   margin-top: 30px;
   font-size: 20px;
 }
-.special_detail .title a[data-v-f6410f6c] {
+.special_detail .title a[data-v-4f410778] {
   margin: 0px auto;
   margin-top: 40px;
   display: block;
@@ -1765,11 +1765,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   font-size: 16px;
   border-radius: 3px;
 }
-.special_detail .title a[data-v-f6410f6c]:hover {
+.special_detail .title a[data-v-4f410778]:hover {
   text-decoration: none;
   background: #FF0000;
 }
-.special_detail .content[data-v-f6410f6c] {
+.special_detail .content[data-v-4f410778] {
   position: relative;
   border: 1px #E5E5E5 solid;
   background: #FFFFFF;
@@ -1779,10 +1779,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   line-height: 28px;
   margin-bottom: 20px;
 }
-.special_detail .content h1[data-v-f6410f6c] {
+.special_detail .content h1[data-v-4f410778] {
   padding: 10px 0px;
 }
-.special_detail .content h2[data-v-f6410f6c] {
+.special_detail .content h2[data-v-4f410778] {
   font-size: 18px;
   border-left: 5px solid #FF4400;
   margin: 10px 0px;
@@ -1790,14 +1790,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   padding-left: 8px;
   background: #FBFBFB;
 }
-.special_detail .content h3[data-v-f6410f6c] {
+.special_detail .content h3[data-v-4f410778] {
   color: #007CCC;
   font-size: 16px;
   padding: 10px 0px;
   padding-left: 10px;
   list-style: square;
 }
-.special_detail .content h3[data-v-f6410f6c]:before {
+.special_detail .content h3[data-v-4f410778]:before {
   position: relative;
   display: inline-block;
   color: #999999;
@@ -1908,12 +1908,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 
 
-.left_nav[data-v-22b69cb2] {
+.left_nav[data-v-d193c750] {
   float: left;
   width: 209px;
   padding: 20px 0px 20px 0px;
 }
-.nav_title[data-v-22b69cb2] {
+.nav_title[data-v-d193c750] {
   display: block;
   width: 208px;
   height: 82px;
@@ -1924,16 +1924,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   margin-left: 1px;
   background: url(/static/img/nav_title_bg.png) no-repeat;
 }
-.nav_title[data-v-22b69cb2]:hover {
+.nav_title[data-v-d193c750]:hover {
   color: #FF3300;
   text-decoration: none;
   background-position: 0px -164px;
 }
-.left_nav .router-link-active[data-v-22b69cb2] {
+.left_nav .router-link-active[data-v-d193c750] {
   color: #ffffff;
   background-position: 0px -82px;
 }
-.left_nav .router-link-active[data-v-22b69cb2]:hover {
+.left_nav .router-link-active[data-v-d193c750]:hover {
   color: #ffffff;
   background-position: 0px -82px;
 }
