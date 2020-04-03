@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="content">
+                <div class="content markdown-body">
                   <vue-markdown :source="specialDetail.content|unescapeHTML"></vue-markdown>
                 </div>
             </div>
