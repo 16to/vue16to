@@ -2,7 +2,8 @@
 import axios from 'axios'
 
 const state={
-    works_all:""
+    works_all:"",
+    works_type:""
 }
 const getters={
     worksAll(state){

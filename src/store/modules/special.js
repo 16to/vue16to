@@ -4,6 +4,7 @@ import axios from 'axios'
 const state={
     special_all:"",
     special_detail:"",
+    special_type:"",
 }
 const getters={
     specialAll(state){
