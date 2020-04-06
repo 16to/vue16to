@@ -9,7 +9,7 @@
                 <div class="left">
                     <div class="box">
                     <div class="title">{{skillDetail.title}}</div>
-                    <div class="info"><span>发布时间：{{skillDetail.addtime|formatTime("YMDHMS")}}</span><span> 分类：<router-link :to='"/skill/?s=type&i="+skillDetail.type'>{{kindToStr(skillDetail.type)}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+skillDetail.tag'>{{tagToStr(skillDetail.tag)}}</router-link></span></div>
+                    <div class="info"><span>发布时间：{{skillDetail.addtime|formatTime("YMDHMS")}}</span><span> 分类：<router-link :to='"/skill/?s=type&i="+skillDetail.type'>{{kindToStr(skillDetail.type)}}</router-link></span><span>标签：<router-link :to='"/skill/?s=tag&i="+skillDetail.tag'>{{tagToStr(skillDetail.tag)}}</router-link></span><span>浏览：{{skillDetail.click}}</span></div>
 
                     <div class="content markdown-body">
                       <vue-markdown :source='skillDetail.content|unescapeHTML'></vue-markdown>
