@@ -2153,8 +2153,11 @@ em {
 .markdown-body h2 {
   border-bottom: none;
 }
-.markdown-body li {
+.markdown-body ol li {
   list-style: decimal;
+}
+.markdown-body ul li {
+  list-style: disc;
 }
 .hljs-comment {
   font-style: normal;
