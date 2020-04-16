@@ -3,7 +3,7 @@ import * as javascript from 'highlight.js/lib/languages/javascript'
 import * as python from 'highlight.js/lib/languages/python'
 import * as bash from 'highlight.js/lib/languages/bash'
 import * as html from 'highlight.js/lib/languages/htmlbars'
-import * as html from 'highlight.js/lib/languages/json'
+import * as json from 'highlight.js/lib/languages/json'
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('python', python)
 hljs.registerLanguage('bash', bash)
