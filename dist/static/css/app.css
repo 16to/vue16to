@@ -2522,14 +2522,6 @@ em {
   line-height: 22px;
   background-color: #fff;
 }
-.detail .left .content h1 {
-  font-size: 18px;
-  line-height: 36px;
-}
-.detail .left .content h2 {
-  font-size: 16px;
-  line-height: 28px;
-}
 .detail .left .content a {
   color: #4095CE;
 }
