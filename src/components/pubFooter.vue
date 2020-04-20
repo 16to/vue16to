@@ -19,7 +19,6 @@
             <li class="li_title">栏目</li>
             <li><router-link to="/skill">技术总结</router-link></li>
             <li><router-link to="/special">热点专题</router-link></li>
-            <li><router-link to="/works">原创项目</router-link></li>
             <li><router-link to="/system">技术栈</router-link></li>
         </ul>
         <ul>
@@ -34,9 +33,7 @@
         </ul>
         <ul>
             <li class="li_title">友链</li>
-            <li><a href="https://cn.vuejs.org" target="_blank">Vue</a></li>
             <li><a href="http://gitui.com" target="_blank">Gitui</a></li>
-            <li><a href="http://leastphp.com" target="_blank">LeastPHP</a></li>
             <li><a href="http://16coder.com" target="_blank">16coder</a></li>
         </ul>
         <ul>

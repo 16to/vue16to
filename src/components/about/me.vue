@@ -28,11 +28,12 @@
                 移动端：Weex，React-Native</pre>
             </div>
             <div class="map_info">
-                <h3>工作经验</h3>
+                <h3>工作经验 {{humanAll}}年</h3>
                 <pre>
-                2018年12月至{{humanTime}} 华为技术有限公司 前端开发SL 负责前端开发、设计，服务运维管理软件开发等
-                2014年8月至2018年12月 华三通信技术有限公司 前端工程师/PL/PM/SE 负责前端开发、设计，服务器开发，软件开发等
-                2012年6月至2014年8月 长荣通讯技术有限公司 WEB工程师 负责前端，WEB，监控通讯软件，产品设计等</pre>
+                【{{humanY}}年{{humanNow}}个月】2018年12月至{{humanTime}}  华为技术有限公司 前端SL 负责前端开发、设计，服务运维管理软件开发等
+                【4年4个月】2014年8月至2018年12月  新华三集团有限公司 前端工程师/PL/PM/SE 负责前端开发、设计，服务器开发，软件开发等
+                【2个月】2014年6月至2014年8月  恒生电子股份有限公司 前端工程师 负责产品iHOMS前端开发、功能开发等，不隐藏工作经历请忽略
+                【2年】2012年6月至2014年6月  长荣通讯技术有限公司 WEB工程师 负责前端，WEB，监控通讯软件，产品设计等</pre>
             </div>
             <div class="map_info">
                 <h3>项目经验</h3>
@@ -48,7 +49,7 @@
                 <h3>职业规划</h3>
                 <pre>
                 热爱IT、互联网行业，积极的工作态度，良好的学习能力，不懈的技术追求
-                专注前端开发，努力成为这方面的大牛c</pre>
+                专注前端开发，一路向前</pre>
             </div>
         </div>
     </div>
@@ -60,7 +61,16 @@ export default {
     computed:{
         humanTime(){
             return moment().format('YYYY[年]MM[月]')
-        }
+        },
+        humanNow(){
+            return moment().format('M')
+        },
+        humanY(){
+            return moment().format('YYYY')-2019
+        },
+        humanAll(){
+            return moment().format('YYYY')-2012
+        },
     }
 }
 </script>

@@ -14,9 +14,7 @@
         <div class="map_info">
         <h3>友链列表</h3>
         <div class="link_list">
-            <a href="https://cn.vuejs.org" target="_blank">Vue.js</a>
             <a href="http://gitui.com" target="_blank">Gitui.js</a>
-            <a href="http://leastphp.com" target="_blank">LeastPHP</a>
             <a href="http://16coder.com" target="_blank">16coder</a>
         </div>
         </div>

@@ -93,14 +93,14 @@
   color: #2D2D2D;
 }
 
-.row[data-v-038d0421] {
+.row[data-v-f52c8382] {
   text-align: center;
 }
-.bottom_bg[data-v-038d0421] {
+.bottom_bg[data-v-f52c8382] {
   background: #7A808A url(/static/img/bottom_bg.png);
   border-top: 1px #cccccc solid;
 }
-.index_bottom[data-v-038d0421] {
+.index_bottom[data-v-f52c8382] {
   position: relative;
   top: 0px;
   z-index: 1;
@@ -108,57 +108,57 @@
   width: 1000px;
   margin: 0px auto;
 }
-.index_bottom span[data-v-038d0421] {
+.index_bottom span[data-v-f52c8382] {
   display: block;
   width: 220px;
   height: 40px;
   margin: 0px auto;
   background: url(/static/img/bottom_title.png) no-repeat;
 }
-#bottom[data-v-038d0421] {
+#bottom[data-v-f52c8382] {
   font-size: 12px;
   height: 145px;
   padding-top: 10px;
   background: #7A808A;
 }
-.bottom_show[data-v-038d0421] {
+.bottom_show[data-v-f52c8382] {
   width: 100%;
   overflow: hidden;
   display: inline-block;
 }
-.bottom_show ul[data-v-038d0421]:last-child {
+.bottom_show ul[data-v-f52c8382]:last-child {
   width: 28%;
 }
-.bottom_show ul[data-v-038d0421] {
+.bottom_show ul[data-v-f52c8382] {
   float: left;
   margin: 0px auto;
   width: 12%;
   text-align: center;
 }
-.bottom_show ul li[data-v-038d0421] {
+.bottom_show ul li[data-v-f52c8382] {
   line-height: 22px;
   color: #eeeeee;
 }
-.bottom_show ul li a[data-v-038d0421] {
+.bottom_show ul li a[data-v-f52c8382] {
   color: #eeeeee;
 }
-.bottom_show ul li a[data-v-038d0421]:hover {
+.bottom_show ul li a[data-v-f52c8382]:hover {
   color: #FFBA00;
 }
-.bottom_show ul .li_title[data-v-038d0421] {
+.bottom_show ul .li_title[data-v-f52c8382] {
   color: #fff;
   font-size: 13px;
   font-weight: bold;
 }
-.bottom_show ul .li_title a[data-v-038d0421] {
+.bottom_show ul .li_title a[data-v-f52c8382] {
   color: #ffffff;
 }
-.bottom_show .copy[data-v-038d0421] {
+.bottom_show .copy[data-v-f52c8382] {
   margin-top: 5px;
   line-height: 15px;
   color: #ffffff;
 }
-.bottom_show .copy span[data-v-038d0421] {
+.bottom_show .copy span[data-v-f52c8382] {
   margin: 0px 5px;
 }
 
@@ -1936,6 +1936,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   color: #ffffff;
   background-position: 0px -82px;
 }
+
+
+
+
+
+
+
 
 
 

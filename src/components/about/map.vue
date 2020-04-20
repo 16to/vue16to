@@ -22,9 +22,6 @@
             </div>
         </div>
         <div class="map_info">
-            <h3><router-link to="/works">原创项目</router-link></h3>
-        </div>
-        <div class="map_info">
             <h3><router-link to="/system">技术栈</router-link></h3>
         </div>
         <div class="map_info">
