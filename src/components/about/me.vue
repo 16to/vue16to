@@ -10,24 +10,6 @@
                 出生年月：1989年1月10日</pre>
             </div>
             <div class="map_info">
-                <h3>教育情况</h3>
-                <pre>
-                2008年9月至2012年6月 杭州电子科技大学 通信工程学院 信息对抗技术专业</pre>
-            </div>
-            <div class="map_info">
-                <h3>技术栈</h3>
-                <pre>
-                前端框架：React，Vue，Angular，Backbone
-                编译语言：ES6，TypeScript，JSX，LESS
-                UI框架：Ant Design，TinyUI，Bootstrap，LayUI，ElementUI，GitUI
-                前端组件：Echarts/AntV，Ztree，Jquery，CKEditor/UEditor
-                后端相关：NodeJs，Express，MySql，Python
-                运维相关：Linux/Shell，PM2/Forever，Nginx
-                自动化测试：Selenium + NodeJs/Python
-                前端构建：Grunt/Gulp，Webpack
-                移动端：Weex，React-Native</pre>
-            </div>
-            <div class="map_info">
                 <h3>工作经验 {{humanAll}}年</h3>
                 <pre>
                 【{{humanY}}年{{humanNow}}个月】2018年12月至{{humanTime}}  华为技术有限公司 前端SL 负责前端开发、设计，服务运维管理软件开发等
@@ -44,6 +26,24 @@
                 办公应用项目：负责整个项目，涉及所有前后端功能，在线oj系统，日报，代办，任务分发，规格管理，设备借用，加班等
                 CMS展示项目：jnsd.16to.com，shedepm.16to.com，yifan.16to.com，hzchangrong.16to.com，supe.16to.com等
                 个人相关项目：个人站点，个人组件，个人框架，个人工具</pre>
+            </div>
+            <div class="map_info">
+                <h3>技术栈</h3>
+                <pre>
+                前端框架：React，Vue，Angular，Backbone
+                编译语言：ES6，TypeScript，JSX，LESS
+                UI框架：Ant Design，TinyUI，Bootstrap，LayUI，ElementUI，GitUI
+                前端组件：Echarts/AntV，Ztree，Jquery，CKEditor/UEditor
+                后端相关：NodeJs，Express，MySql，Python
+                运维相关：Linux/Shell，PM2/Forever，Nginx
+                自动化测试：Selenium + NodeJs/Python
+                前端构建：Grunt/Gulp，Webpack
+                移动端：Weex，React-Native</pre>
+            </div>
+            <div class="map_info">
+                <h3>教育情况</h3>
+                <pre>
+                2008年9月至2012年6月 杭州电子科技大学 信息对抗技术专业</pre>
             </div>
             <div class="map_info">
                 <h3>职业规划</h3>

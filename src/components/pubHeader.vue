@@ -14,7 +14,7 @@
             <router-link to="/about/me">关于</router-link>
         </div>
         <div class="search">
-            <input type="text" name="s" id="seach_input" @keyup.enter="search" value="">
+            <input type="text" name="s" id="seach_input" @keyup.enter="search" value="" placeholder="输入标题或内容">
             <span @click="search()" id="search_btn"></span>
         </div>
     </div>
