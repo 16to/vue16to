@@ -20,12 +20,33 @@
             <div class="map_info">
                 <h3>项目经验</h3>
                 <pre>
-                前端监控项目：负责jsAgent探针，API请求，JS错误，静态资源，设备信息，自定义上报，链路跟踪，操作明细等信息的上报和展示
-                Ops平台项目：负责前端所有内容，涉及资源管理，监控，作业，日志，通知，API，Agent，报表等业务
-                设备平台项目：负责单个嵌入式设备、批量设备管理相关的前端所有内容，涉及Restful，snmp，日志，电源，功耗，批量升级，部署等
-                办公应用项目：负责整个项目，涉及所有前后端功能，在线oj系统，日报，代办，任务分发，规格管理，设备借用，加班等
-                CMS展示项目：jnsd.16to.com，shedepm.16to.com，yifan.16to.com，hzchangrong.16to.com，supe.16to.com等
-                个人相关项目：个人站点，个人组件，个人框架，个人工具</pre>
+                前端监控项目：
+                        1. 负责jsAgent探针，API请求，JS错误，静态资源，设备信息，自定义上报，链路跟踪，操作明细等信息的上报和展示
+                        2. 采用原生js完成前端探针
+                        3. React全家桶 + ant design完成管理
+                        4. Angular8+tiny3+console完成展示
+                Ops平台项目：
+                        1. 负责前端所有内容，涉及资源管理，监控，作业，日志，通知，API，Agent，报表等业务
+                        2. React全家桶从0->1
+                        3. Angular7+devui重构项目
+                        4. nodejs+express+haproxy搭建服务，selenium自动化
+                设备平台项目：
+                        1. 负责单个嵌入式设备、批量设备管理相关的前端所有内容，涉及Restful，snmp，日志，电源，升级，部署等
+                        2. 采用backbone+gulp+layUI+bootstrap从0->1
+                        3. 采用angular2+webpack+bootstrap完成管理
+                办公应用项目：
+                        1. 负责整个项目，涉及所有前后端功能，在线oj系统，日报，代办，任务分发，规格管理，设备借用，加班等
+                        2. vue全家桶
+                        3. weex移动端
+                CMS展示项目：
+                        1. 列表jnsd.16to.com，shedepm.16to.com，yifan.16to.com，hzchangrong.16to.com，supe.16to.com等
+                        2. Jquery+bootstrap+gitui
+                        3. php+mysql
+                个人相关项目：
+                        1. 个人站点，个人组件，个人框架，个人工具
+                        2. vue展示页http://16to.com
+                        3. react管理页http://admin.16to.com
+                        4. nodejs服务http://api.16to.com 和 http://g.16to.com</pre>
             </div>
             <div class="map_info">
                 <h3>技术栈</h3>
@@ -38,7 +59,7 @@
                 运维相关：Linux/Shell，PM2/Forever，Nginx
                 自动化测试：Selenium + NodeJs/Python
                 前端构建：Grunt/Gulp，Webpack
-                移动端：Weex，React-Native</pre>
+                移动端：Weex，React-Native，Futter</pre>
             </div>
             <div class="map_info">
                 <h3>教育情况</h3>
