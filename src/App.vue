@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 #header{
-    height: 45px;
+    height: 44px;
 }
 #content{
     margin-top: 45px;
