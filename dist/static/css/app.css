@@ -2560,7 +2560,7 @@ em {
   margin-right: 5px;
 }
 .detail .left .content {
-  padding: 20px 0px;
+  padding: 0px 0px 20px 0px;
   overflow: hidden;
   font-size: 14px;
   line-height: 22px;

@@ -11,7 +11,10 @@ const server = {
 
 // 执行的任务列表
 const commonds = [
-  "ls",
+  "cd /www/web/vue16to/",
+  "git pull",
+  "npm install",
+  "pm2 restart vue16to",
 ];
 
 // 连接
