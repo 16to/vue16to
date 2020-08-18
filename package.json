@@ -10,7 +10,8 @@
     "server": "node app.js",
     "build": "node build/build.js",
     "analyz": "NODE_ENV=production npm_config_report=true npm run build",
-    "debug": "npm-run-all --parallel dev api"
+    "debug": "npm-run-all --parallel dev api",
+    "deploy": "node ./deploy/index.js"
   },
   "dependencies": {
     "axios": "^0.18.1",
@@ -56,6 +57,7 @@
     "rimraf": "^2.6.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
+    "ssh2": "^0.8.9",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
