@@ -1735,7 +1735,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   vertical-align: middle;
 }
 /*special detail*/
-.special_detail .title[data-v-32a6002c] {
+.special_detail .title[data-v-35d29840] {
   overflow: hidden;
   width: 100%;
   height: 260px;
@@ -1746,15 +1746,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   text-align: center;
   color: #FFFFFF;
 }
-.special_detail .title h1[data-v-32a6002c] {
+.special_detail .title h1[data-v-35d29840] {
   margin-top: 40px;
   font-size: 48px;
 }
-.special_detail .title h2[data-v-32a6002c] {
+.special_detail .title h2[data-v-35d29840] {
   margin-top: 30px;
   font-size: 20px;
 }
-.special_detail .title a[data-v-32a6002c] {
+.special_detail .title a[data-v-35d29840] {
   margin: 0px auto;
   margin-top: 40px;
   display: block;
@@ -1765,24 +1765,24 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   font-size: 16px;
   border-radius: 3px;
 }
-.special_detail .title a[data-v-32a6002c]:hover {
+.special_detail .title a[data-v-35d29840]:hover {
   text-decoration: none;
   background: #FF0000;
 }
-.special_detail .content[data-v-32a6002c] {
+.special_detail .content[data-v-35d29840] {
   position: relative;
   border: 1px #E5E5E5 solid;
   background: #FFFFFF;
-  padding: 20px 20px;
+  padding: 0px 20px 20px 20px;
   color: #333333;
   font-size: 14px;
   line-height: 28px;
   margin-bottom: 20px;
 }
-.special_detail .content h1[data-v-32a6002c] {
+.special_detail .content h1[data-v-35d29840] {
   padding: 10px 0px;
 }
-.special_detail .content h2[data-v-32a6002c] {
+.special_detail .content h2[data-v-35d29840] {
   font-size: 18px;
   border-left: 5px solid #FF4400;
   margin: 10px 0px;
@@ -1790,14 +1790,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   padding-left: 8px;
   background: #FBFBFB;
 }
-.special_detail .content h3[data-v-32a6002c] {
+.special_detail .content h3[data-v-35d29840] {
   color: #007CCC;
   font-size: 16px;
   padding: 10px 0px;
   padding-left: 10px;
   list-style: square;
 }
-.special_detail .content h3[data-v-32a6002c]:before {
+.special_detail .content h3[data-v-35d29840]:before {
   position: relative;
   display: inline-block;
   color: #999999;

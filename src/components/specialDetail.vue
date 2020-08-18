@@ -95,7 +95,7 @@ export default {
   position: relative;
   border: 1px #E5E5E5 solid;
   background: #FFFFFF;
-  padding: 20px 20px;
+  padding: 0px 20px 20px 20px;
   color: #333333;
   font-size: 14px;
   line-height: 28px;
