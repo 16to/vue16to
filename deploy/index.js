@@ -56,7 +56,7 @@ function deploy() {
       })
       .on("data", (data) => {
         buf += data;
-        console.log(buf); // 调试用，可以写到日志中
+        // console.log(buf); // 调试用，可以写到日志中
       });
     // 执行命令行
     console.info("*******执行命令*******");

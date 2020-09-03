@@ -14,7 +14,15 @@ const actions={
     getTree({commit,state},param){
         let url="/api/system_tree";
         if(param && param.s !== undefined){
-            url="/api/system_tree/?s="+param.s;
+            if(param.s==="0"){
+                url="/api/javascript_tree";
+            }
+            if(param.s==="1"){
+                url="/api/react_tree";
+            }
+            if(param.s==="2"){
+                url="/api/es6_tree";
+            }
         }
         axios.get(url).then((res)=>{
             commit("SYSTEM_TREE",res.data);
