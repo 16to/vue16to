@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="map_info">
-            <h3><router-link to="/special">热点专题</router-link></h3>
+            <h3><router-link to="/special">系列专题</router-link></h3>
             <div class="map_list">
                 <router-link to="/special/?type0">前端专题</router-link>
                 <router-link to="/skill/?type1">后端专题</router-link>

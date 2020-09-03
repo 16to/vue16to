@@ -2,7 +2,7 @@
     <div class="home">
         <div class="row">
             <div class="list_title">
-                <div class="left">热点专题</div>
+                <div class="left">系列专题</div>
                 <div class="right">
                     <router-link to="/special">全部</router-link>
                     /

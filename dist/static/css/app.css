@@ -7,7 +7,7 @@
     background-color: #F4F4F4;
 }
 
-.head[data-v-6b4d511e] {
+.head[data-v-3ed57906] {
   position: fixed;
   top: 0px;
   z-index: 9999;
@@ -16,20 +16,20 @@
   margin-top: 0px;
   background: url(/static/img/top_bg.png);
 }
-.nav[data-v-6b4d511e] {
+.nav[data-v-3ed57906] {
   height: 45px;
 }
-.logo[data-v-6b4d511e] {
+.logo[data-v-3ed57906] {
   float: left;
   width: 150px;
   height: 38px;
   margin-top: 2px;
 }
-.tab[data-v-6b4d511e] {
+.tab[data-v-3ed57906] {
   font-size: 14px;
   font-weight: bold;
 }
-.tab a[data-v-6b4d511e] {
+.tab a[data-v-3ed57906] {
   display: block;
   float: left;
   width: 55px;
@@ -38,23 +38,23 @@
   text-align: center;
   color: #000000;
 }
-.tab a[data-v-6b4d511e]:hover {
+.tab a[data-v-3ed57906]:hover {
   background: #2d2d2d;
   color: #ffffff;
   text-decoration: none;
 }
-.tab .router-link-exact-active[data-v-6b4d511e],
-.tab .router-link-active[data-v-6b4d511e] {
+.tab .router-link-exact-active[data-v-3ed57906],
+.tab .router-link-active[data-v-3ed57906] {
   background: #2d2d2d;
   color: #ffffff;
 }
-.search[data-v-6b4d511e] {
+.search[data-v-3ed57906] {
   float: right;
   width: 180px;
   height: 25px;
   margin-top: 8px;
 }
-#seach_input[data-v-6b4d511e] {
+#seach_input[data-v-3ed57906] {
   float: left;
   width: 130px;
   height: 25px;
@@ -69,7 +69,7 @@
   border-right: 0px;
   outline: none;
 }
-#search_btn[data-v-6b4d511e] {
+#search_btn[data-v-3ed57906] {
   float: left;
   display: block;
   height: 25px;
@@ -79,28 +79,29 @@
   margin-top: 0px;
   background: #F6F6F6 url(/static/img/search_btn.png) no-repeat;
 }
-#search_btn[data-v-6b4d511e]:hover {
+#search_btn[data-v-3ed57906]:hover {
+  cursor: pointer;
   background-position: 0px -25px;
 }
-.login[data-v-6b4d511e] {
+.login[data-v-3ed57906] {
   float: right;
   margin-left: 20px;
   line-height: 44px;
   font-size: 12px;
   color: #666666;
 }
-.login a[data-v-6b4d511e] {
+.login a[data-v-3ed57906] {
   color: #2D2D2D;
 }
 
-.row[data-v-f52c8382] {
+.row[data-v-5b44652f] {
   text-align: center;
 }
-.bottom_bg[data-v-f52c8382] {
+.bottom_bg[data-v-5b44652f] {
   background: #7A808A url(/static/img/bottom_bg.png);
   border-top: 1px #cccccc solid;
 }
-.index_bottom[data-v-f52c8382] {
+.index_bottom[data-v-5b44652f] {
   position: relative;
   top: 0px;
   z-index: 1;
@@ -108,59 +109,105 @@
   width: 1000px;
   margin: 0px auto;
 }
-.index_bottom span[data-v-f52c8382] {
+.index_bottom span[data-v-5b44652f] {
   display: block;
   width: 220px;
   height: 40px;
   margin: 0px auto;
   background: url(/static/img/bottom_title.png) no-repeat;
 }
-#bottom[data-v-f52c8382] {
+#bottom[data-v-5b44652f] {
   font-size: 12px;
   height: 145px;
   padding-top: 10px;
   background: #7A808A;
 }
-.bottom_show[data-v-f52c8382] {
+.bottom_show[data-v-5b44652f] {
   width: 100%;
   overflow: hidden;
   display: inline-block;
 }
-.bottom_show ul[data-v-f52c8382]:last-child {
+.bottom_show ul[data-v-5b44652f]:last-child {
   width: 28%;
 }
-.bottom_show ul[data-v-f52c8382] {
+.bottom_show ul[data-v-5b44652f] {
   float: left;
   margin: 0px auto;
   width: 12%;
   text-align: center;
 }
-.bottom_show ul li[data-v-f52c8382] {
+.bottom_show ul li[data-v-5b44652f] {
   line-height: 22px;
   color: #eeeeee;
 }
-.bottom_show ul li a[data-v-f52c8382] {
+.bottom_show ul li a[data-v-5b44652f] {
   color: #eeeeee;
 }
-.bottom_show ul li a[data-v-f52c8382]:hover {
+.bottom_show ul li a[data-v-5b44652f]:hover {
   color: #FFBA00;
 }
-.bottom_show ul .li_title[data-v-f52c8382] {
+.bottom_show ul .li_title[data-v-5b44652f] {
   color: #fff;
   font-size: 13px;
   font-weight: bold;
 }
-.bottom_show ul .li_title a[data-v-f52c8382] {
+.bottom_show ul .li_title a[data-v-5b44652f] {
   color: #ffffff;
 }
-.bottom_show .copy[data-v-f52c8382] {
+.bottom_show .copy[data-v-5b44652f] {
   margin-top: 5px;
   line-height: 15px;
   color: #ffffff;
 }
-.bottom_show .copy span[data-v-f52c8382] {
+.bottom_show .copy span[data-v-5b44652f] {
   margin: 0px 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2515,6 +2562,12 @@ em {
   color: #ffffff;
   text-decoration: none;
   background: #FF4400;
+}
+.system .detail {
+  margin-top: 0;
+}
+.system .detail .box {
+  border-top: 1px #F4F4F4 solid;
 }
 /*detail*/
 .detail {

@@ -2,7 +2,7 @@
     <div class="special">
         <div class="row">
             <div class="list_title">
-                <div class="left">热点专题<span>{{search_title}}</span></div>
+                <div class="left">系列专题<span>{{search_title}}</span></div>
                 <div class="right">
                     <router-link to="/special">全部</router-link>
                     /
@@ -15,12 +15,12 @@
             </div>
             <div class="list">
                 <ul>
-                    <li v-for="v in special_all">
+                    <li v-for="v in special_all" v-bind:key="v.id">
                         <div class="box">
                             <router-link :to='"/special/detail/"+v.id' class="img"><img :src="v.img|imgAddPath" :title="v.title"></router-link>
                             <div class="content">
                                 <p>
-                                    <router-link :to='"/special/detail/"+v.id' :title="v.title" class="title">{{v.title}}</router-link>
+                                    <router-link  :to='"/special/detail/"+v.id' :title="v.title" class="title">{{v.title}}</router-link>
                                 </p>
                                 <p>
                                     <router-link :to='"/special/?s=type"+v.type' class="kind">{{specialToStr(v.type)}}</router-link><em class="num"><span>{{v.click}}</span>人气</em><em class="time">{{v.addtime|formatTime("YMD")}}</em>
@@ -59,7 +59,7 @@ export default {
                 str="工具专题";
             }
             else{
-                str="全部内容";
+                str="全部";
             }
             return str;
         }

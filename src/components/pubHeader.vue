@@ -107,6 +107,7 @@ export default {
 }
 #search_btn:hover
 {
+    cursor: pointer;
     background-position:0px -25px;
 }
 .login{

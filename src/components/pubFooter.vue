@@ -18,7 +18,7 @@
         <ul>
             <li class="li_title">栏目</li>
             <li><router-link to="/skill">技术总结</router-link></li>
-            <li><router-link to="/special">热点专题</router-link></li>
+            <li><router-link to="/special">系列专题</router-link></li>
             <li><router-link to="/system">技术栈</router-link></li>
         </ul>
         <ul>

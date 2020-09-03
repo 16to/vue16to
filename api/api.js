@@ -16,6 +16,7 @@ const special_all=require('./special_all.json');
 const special_detail=require('./special_detail.json');
 const works_all=require('./works_all.json');
 const system_tree=require('./system_tree.json');
+const javascript_tree=require('./javascript_tree.json');
 const search_all=require('./search_all.json');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
@@ -107,7 +108,11 @@ app.get('/16to/search', function (req, res) {
 });
 
 app.get('/16to/system_tree', function (req, res) {
-    res.send(system_tree);
+    if(req.query.s=="0"){
+        res.send(javascript_tree);
+    } else{
+        res.send(system_tree);
+    }
 });
 //init
 var server = app.listen(3001, function () {

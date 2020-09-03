@@ -10,10 +10,13 @@ const getters={
     }
 }
 const actions={
-    //获取getSystemTree
-    getSystemTree({commit,state}){
-        axios.get("/api/system_tree").then((res)=>{
-            //console.log(res);
+    //获取getTree
+    getTree({commit,state},param){
+        let url="/api/system_tree";
+        if(param && param.s !== undefined){
+            url="/api/system_tree/?s="+param.s;
+        }
+        axios.get(url).then((res)=>{
             commit("SYSTEM_TREE",res.data);
         })
     }

@@ -71,7 +71,7 @@ export default {
                 str="时间排序";
             }
             else{
-                str="全部内容";
+                str="全部";
             }
             return str;
         }
